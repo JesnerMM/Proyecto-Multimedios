@@ -1,8 +1,22 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { MapPinIcon, ClockIcon, InstagramIcon, PhoneIcon } from 'lucide-react';
+import React from "react";
+import { Link } from "react-router-dom";
+import { MapPinIcon, ClockIcon, InstagramIcon, PhoneIcon } from "lucide-react";
+import WhatsAppButton from "../ui/WhatsAppButton";
 const Footer = () => {
-  return <footer className="bg-[#2D1B14] text-white">
+  return (
+    <footer className="bg-[#2D1B14] text-white">
+      <section className="py-12 bg-[#2D1B14] text-white">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold mb-6">¿Listo para ordenar?</h2>
+          <p className="text-xl mb-8 max-w-2xl mx-auto">
+            Ordena ahora por WhatsApp y disfruta de nuestra deliciosa comida en
+            casa o pasa a visitarnos.
+          </p>
+          <div className="max-w-xs mx-auto">
+            <WhatsAppButton className="w-full text-sm py-2.5 px-4" />
+          </div>
+        </div>
+      </section>
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
@@ -12,10 +26,20 @@ const Footer = () => {
               personalizado en Juan Viñas, Costa Rica.
             </p>
             <div className="flex space-x-4">
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+              >
                 <InstagramIcon className="w-6 h-6 text-white hover:text-[#D4AF37] transition-colors" />
               </a>
-              <a href="https://wa.me/50612345678" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+              <a
+                href="https://wa.me/50612345678"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="WhatsApp"
+              >
                 <PhoneIcon className="w-6 h-6 text-white hover:text-[#D4AF37] transition-colors" />
               </a>
             </div>
@@ -24,22 +48,34 @@ const Footer = () => {
             <h3 className="text-xl font-semibold mb-4">Enlaces</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/" className="text-gray-300 hover:text-white transition-colors">
+                <Link
+                  to="/"
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
                   Inicio
                 </Link>
               </li>
               <li>
-                <Link to="/menu" className="text-gray-300 hover:text-white transition-colors">
+                <Link
+                  to="/menu"
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
                   Menú
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="text-gray-300 hover:text-white transition-colors">
+                <Link
+                  to="/about"
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
                   Nosotros
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="text-gray-300 hover:text-white transition-colors">
+                <Link
+                  to="/contact"
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
                   Contacto
                 </Link>
               </li>
@@ -73,6 +109,7 @@ const Footer = () => {
           </p>
         </div>
       </div>
-    </footer>;
+    </footer>
+  );
 };
 export default Footer;
