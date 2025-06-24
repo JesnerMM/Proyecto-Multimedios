@@ -18,7 +18,7 @@ const Home = () => {
           <img
             src="src/assets/banner.jpeg"
             alt="Interior de Donde Carla"
-            className="absolute object-cover inset-0 w-full h-full"
+            className="absolute object-cover inset-0 w-full h-full brightness-50 contrast-125"
           />
           <div className="container mx-auto px-4 z-20 text-center">
             <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-4">
@@ -28,14 +28,14 @@ const Home = () => {
             <p className="text-white-1 text-xl md:text-2xl m-8 max-w-2xl mx-auto">
               Disfruta de la mejor comida y siéntete como en casa.
             </p>
-            <div className="flex flex-row justify-center md:gap-40">
+            <div className="grid justify-items-stretch gap-4 md:flex md:flex-row md:justify-center md:gap-40">
               <Link
                 to="/menu"
-                className="flex items-center justify-center bg-secondary-1 hover:bg-secondary-3 active:bg-secondary-2 text-white-1 font-medium text-sm py-2.5 px-4 rounded-md w-48 text-center"
+                className="justify-self-center md:flex md:items-center md:justify-center bg-secondary-1 hover:bg-secondary-3 active:bg-secondary-2 text-white-1 font-medium text-sm py-2.5 px-4 rounded-md w-80 md:w-48 text-center"
               >
                 Ver Menú
               </Link>
-              <WhatsAppButton className="w-48 bg-ternary-1 hover:bg-ternary-3 active:bg-ternary-2 text-white-1 text-sm py-2.5 px-4" />
+              <WhatsAppButton className="justify-self-center w-80 md:w-48 bg-ternary-1 hover:bg-ternary-3 active:bg-ternary-2 text-white-1 text-sm py-2.5 px-4" />
             </div>
           </div>
         </div>
@@ -172,7 +172,9 @@ const Home = () => {
               especiales siguiéndonos en Instagram.
             </p>
           </div>
-          <InstagramFeed className="w-full" />
+          <div className="flex justify-center">
+            <InstagramFeed className="w-full" />
+          </div>
           <div className="text-center mt-8">
             <a
               href="https://www.instagram.com/p/DBUyxSAx3kf/"

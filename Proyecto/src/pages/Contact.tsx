@@ -13,10 +13,10 @@ const Contact = () => {
   };
 
   return (
-    <div className="w-full bg-[#F5F1EB]">
+    <div className="w-full bg-background-white">
       <section className="relative bg-[#2D1B14] text-white">
         <div className="absolute inset-0 bg-black opacity-30 z-10"></div>
-        <div className="relative h-[50vh] md:h-[60vh] flex items-center justify-center overflow-hidden">
+        <div className="relative h-[50vh] md:h-[25vh] flex items-center justify-center overflow-hidden">
           <img
             src="src/assets/banner.jpeg"
             alt="Interior de Donde Carla"
