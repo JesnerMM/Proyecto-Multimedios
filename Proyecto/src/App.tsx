@@ -8,7 +8,7 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 export function App() {
   return <Router>
-      <div className="flex flex-col min-h-screen bg-[#F5F1EB]">
+      <div className="box-border flex flex-col min-h-screen bg-background-white">
         <Header />
         <main className="flex-grow">
           <Routes>

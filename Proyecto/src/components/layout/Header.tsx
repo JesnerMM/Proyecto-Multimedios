@@ -8,7 +8,7 @@ const Header = () => {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
-    <header className="sticky top-0 z-50 bg-white shadow-md">
+    <header className="sticky top-0 z-50 bg-background-white shadow-md">
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         <Link to="/" className="flex items-center">
           <img
@@ -16,17 +16,17 @@ const Header = () => {
             alt="Logo Donde Carla"
             className="h-10 md:h-12 rounded-full"
           />
-          <span className="ml-2 text-2xl md:text-3xl font-playfair text-[#2D1B14] font-bold">
+          <span className="ml-2 text-2xl md:text-3xl font-playfair text-black-1 font-bold">
             {" "}
             {/* Añadido font-bold */}
             Donde
           </span>
-          <span className="ml-1 text-2xl md:text-3xl font-dancing text-[#FFD700]">
+          <span className="ml-1 text-2xl md:text-4xl font-dancing text-golden-1">
             Carla
           </span>
         </Link>
         <button
-          className="md:hidden text-[#2D1B14]"
+          className="md:hidden text-secondary-1"
           onClick={toggleMenu}
           aria-label="Alternar menú"
         >
@@ -36,8 +36,8 @@ const Header = () => {
           <NavLink
             to="/"
             className={({ isActive }) =>
-              `text-[#2D1B14] font-medium hover:text-[#8B6F47] transition-colors ${
-                isActive ? "border-b-2 border-[#8B6F47] pb-1" : ""
+              `text-black-1 font-medium hover:text-secondary-3 active:text-secondary-2 transition-colors ${
+                isActive ? "border-b-2 border-secondary-1 pb-1" : ""
               }`
             }
           >
@@ -46,8 +46,8 @@ const Header = () => {
           <NavLink
             to="/menu"
             className={({ isActive }) =>
-              `text-[#2D1B14] font-medium hover:text-[#8B6F47] transition-colors ${
-                isActive ? "border-b-2 border-[#8B6F47] pb-1" : ""
+              `text-black-1 font-medium hover:text-secondary-3 active:text-secondary-2 transition-colors ${
+                isActive ? "border-b-2 border-secondary-1 pb-1" : ""
               }`
             }
           >
@@ -56,8 +56,8 @@ const Header = () => {
           <NavLink
             to="/about"
             className={({ isActive }) =>
-              `text-[#2D1B14] font-medium hover:text-[#8B6F47] transition-colors ${
-                isActive ? "border-b-2 border-[#8B6F47] pb-1" : ""
+              `text-black-1 font-medium hover:text-secondary-3 active:text-secondary-2 transition-colors ${
+                isActive ? "border-b-2 border-secondary-1 pb-1" : ""
               }`
             }
           >
@@ -66,8 +66,8 @@ const Header = () => {
           <NavLink
             to="/contact"
             className={({ isActive }) =>
-              `text-[#2D1B14] font-medium hover:text-[#8B6F47] transition-colors ${
-                isActive ? "border-b-2 border-[#8B6F47] pb-1" : ""
+              `text-black-1 font-medium hover:text-secondary-3 active:text-secondary-2 transition-colors ${
+                isActive ? "border-b-2 border-secondary-1 pb-1" : ""
               }`
             }
           >
@@ -75,7 +75,7 @@ const Header = () => {
           </NavLink>
           <WhatsAppButton
             label="Ordenar"
-            className="w-36 text-sm py-2.5 px-4 bg-[#2D1B14] hover:bg-[#1A110D] text-white rounded-md"
+            className="w-36 text-sm py-2.5 px-4 bg-ternary-1 hover:bg-ternary-3 active:bg-ternary-2 text-white-1 rounded-md"
           />
         </nav>
       </div>

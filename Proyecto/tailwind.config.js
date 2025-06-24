@@ -6,16 +6,35 @@ export default {
       colors: {
         primary: {
           DEFAULT: "#2D1B14",
-          light: "#8B6F47",
+          light: "#B57258",
         },
         secondary: {
-          DEFAULT: "#1F2937",
+          1: "#8B6F47",
+          2: "#9F7F51",
+          3: "#AE8E61"
+        },
+        ternary: {
+          1: "#1F2937",
+          2: "#3C506B",
+          3: "#5A779F",
+          4: "#374151"
+        },
+        golden: {
+          1: "#D4AF37"
+        },
+        white: {
+          1: "#FFFFFF"
+        },
+        black: {
+          1: "#000000"
         },
         accent: {
           DEFAULT: "#D4AF37",
         },
         background: {
           light: "#F5F1EB",
+          beige: "#F5F1EB",
+          white: "#FFFFFF"
         },
       },
       fontFamily: {

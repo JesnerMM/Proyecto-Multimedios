@@ -4,16 +4,16 @@ import { MapPinIcon, ClockIcon, InstagramIcon, PhoneIcon } from "lucide-react";
 import WhatsAppButton from "../ui/WhatsAppButton";
 const Footer = () => {
   return (
-    <footer className="bg-[#2D1B14] text-white">
-      <section className="py-12 bg-[#2D1B14] text-white">
+    <footer className="bg-primary text-white-1">
+      <section className="py-12">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6">¿Listo para ordenar?</h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
+          <h2 className="text-2xl font-bold mb-6">¿Listo para ordenar?</h2>
+          <p className="text-lg mb-8 max-w-2xl mx-auto">
             Ordena ahora por WhatsApp y disfruta de nuestra deliciosa comida en
             casa o pasa a visitarnos.
           </p>
           <div className="max-w-xs mx-auto">
-            <WhatsAppButton className="w-full text-sm py-2.5 px-4" />
+            <WhatsAppButton className="w-full bg-ternary-1 hover:bg-ternary-3 active:bg-ternary-2 text-sm py-2.5 px-4" />
           </div>
         </div>
       </section>
@@ -21,7 +21,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <h3 className="text-xl font-semibold mb-4">Donde Carla</h3>
-            <p className="text-sm text-gray-300 mb-4">
+            <p className="text-sm  mb-4">
               Comida casera, de alta calidad y con un servicio rápido y
               personalizado en Juan Viñas, Costa Rica.
             </p>
@@ -32,7 +32,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 aria-label="Instagram"
               >
-                <InstagramIcon className="w-6 h-6 text-white hover:text-[#D4AF37] transition-colors" />
+                <InstagramIcon className="w-6 h-6 hover:text-secondary-3 active:text-secondary-2 transition-colors" />
               </a>
               <a
                 href="https://wa.me/50612345678"
@@ -40,7 +40,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 aria-label="WhatsApp"
               >
-                <PhoneIcon className="w-6 h-6 text-white hover:text-[#D4AF37] transition-colors" />
+                <PhoneIcon className="w-6 h-6 hover:text-secondary-3 active:text-secondary-2 transition-colors" />
               </a>
             </div>
           </div>
@@ -50,7 +50,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/"
-                  className="text-gray-300 hover:text-white transition-colors"
+                  className="hover:text-secondary-3 active:text-secondary-2 transition-colors"
                 >
                   Inicio
                 </Link>
@@ -58,7 +58,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/menu"
-                  className="text-gray-300 hover:text-white transition-colors"
+                  className="hover:text-secondary-3 active:text-secondary-2 transition-colors"
                 >
                   Menú
                 </Link>
@@ -66,7 +66,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/about"
-                  className="text-gray-300 hover:text-white transition-colors"
+                  className="hover:text-secondary-3 active:text-secondary-2 transition-colors"
                 >
                   Nosotros
                 </Link>
@@ -74,7 +74,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/contact"
-                  className="text-gray-300 hover:text-white transition-colors"
+                  className="hover:text-secondary-3 active:text-secondary-2 transition-colors"
                 >
                   Contacto
                 </Link>
@@ -86,23 +86,22 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-start">
                 <MapPinIcon className="w-5 h-5 mr-2 flex-shrink-0 mt-0.5" />
-                <p className="text-gray-300">Juan Viñas, Cartago, Costa Rica</p>
+                <p>Juan Viñas, Cartago, Costa Rica</p>
               </div>
               <div className="flex items-start">
                 <ClockIcon className="w-5 h-5 mr-2 flex-shrink-0 mt-0.5" />
                 <div>
-                  <p className="text-gray-300">
-                    Lunes - Viernes: 11:00 AM - 9:00 PM
-                  </p>
-                  <p className="text-gray-300">
-                    Sábado - Domingo: 12:00 PM - 10:00 PM
-                  </p>
+                  <p>Lunes: 11:00 AM - 8:00 PM</p>
+                  <p>Martes: Cerrado</p>
+                  <p>Miércoles y Domingo: 11:00 AM - 9:00 PM</p>
+                  <p>Jueves: 11:00 AM - 9:30 PM</p>
+                  <p>Viernes y Sábado: 11:00 AM - 10:00 PM</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div className="mt-8 pt-6 border-t border-gray-700 text-center text-sm text-gray-400">
+        <div className="mt-8 pt-6 text-center">
           <p>
             © {new Date().getFullYear()} Donde Carla. Todos los derechos
             reservados.
