@@ -6,9 +6,11 @@ import Home from './pages/Home';
 import Menu from './pages/Menu';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import 'animate.css';
+
 export function App() {
   return <Router>
-      <div className="box-border flex flex-col min-h-screen bg-background-white">
+      <div className="box-border flex flex-col min-h-screen bg-background-white overflow-hidden">
         <Header />
         <main className="flex-grow">
           <Routes>

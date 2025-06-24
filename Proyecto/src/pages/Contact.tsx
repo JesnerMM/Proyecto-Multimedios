@@ -5,6 +5,7 @@ import {
   InstagramIcon,
   MessageCircleIcon,
 } from "lucide-react";
+import WhatsAppButton from "../components/ui/WhatsAppButton";
 
 const Contact = () => {
   const handleSubmit = (e: any) => {
@@ -20,11 +21,11 @@ const Contact = () => {
           <img
             src="src/assets/banner.jpeg"
             alt="Interior de Donde Carla"
-            className="absolute inset-0 w-full h-full object-cover"
+            className="absolute inset-0 w-full h-full object-cover brightness-50 contrast-125"
           />
-          <div className="container mx-auto px-4 z-20 text-center">
+          <div className="container mx-auto px-4 z-20 text-center text-white-1">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-              <span className="font-playfair text-white">Contáctanos </span>
+              <span className="font-playfair">Contáctanos</span>
             </h1>
             <p className="text-xl md:text-2xl max-w-2xl mx-auto">
               Estamos listos para atenderte
@@ -33,61 +34,56 @@ const Contact = () => {
         </div>
       </section>
 
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-background-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-2xl font-bold text-[#2D1B14] mb-6">
+              <h2 className="text-2xl font-bold text-primary mb-6">
                 Información de Contacto
               </h2>
               <div className="space-y-6 mb-8">
                 <div className="flex items-start">
-                  <MapPinIcon className="w-6 h-6 text-[#8B6F47] mr-3 flex-shrink-0 mt-0.5" />
+                  <MapPinIcon className="w-6 h-6 text-secondary-1 mr-3 flex-shrink-0 mt-0.5" />
                   <div>
-                    <h3 className="font-semibold text-[#2D1B14]">Dirección</h3>
-                    <p className="text-gray-700">
+                    <h3 className="font-semibold text-primary">Dirección</h3>
+                    <p className="text-white-2">
                       100m Este del Parque Central, Juan Viñas, Cartago, Costa
                       Rica
                     </p>
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <ClockIcon className="w-6 h-6 text-[#8B6F47] mr-3 flex-shrink-0 mt-0.5" />
+                  <ClockIcon className="w-6 h-6 text-secondary-1 mr-3 flex-shrink-0 mt-0.5" />
                   <div>
-                    <h3 className="font-semibold text-[#2D1B14]">Horario</h3>
-                    <p>Lunes: 11:00 AM - 8:00 PM</p>
-                    <p>Martes: Cerrado</p>
-                    <p>Miércoles: 11:00 AM - 9:00 PM</p>
-                    <p>Jueves: 11:00 AM - 9:30 PM</p>
-                    <p>Viernes: 11:00 AM - 10:00 PM</p>
-                    <p>Sábado: 11:00 AM - 10:00 PM</p>
-                    <p>Domingo: 11:00 AM - 9:00 PM</p>
+                    <h3 className="font-semibold text-primary">Horario</h3>
+                    <p className="text-white-2">
+                      Lunes: 11:00 AM - 8:00 PM <br />
+                      Martes: Cerrado <br />
+                      Miércoles: 11:00 AM - 9:00 PM <br />
+                      Jueves: 11:00 AM - 9:30 PM <br />
+                      Viernes: 11:00 AM - 10:00 PM <br />
+                      Sábado: 11:00 AM - 10:00 PM <br />
+                      Domingo: 11:00 AM - 9:00 PM <br />
+                    </p>
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <MessageCircleIcon className="w-6 h-6 text-[#8B6F47] mr-3 flex-shrink-0 mt-0.5" />
+                  <MessageCircleIcon className="w-6 h-6 text-secondary-1 mr-3 flex-shrink-0 mt-0.5" />
                   <div>
-                    <h3 className="font-semibold text-[#2D1B14]">WhatsApp</h3>
-                    <p className="text-gray-700">+506 1234-5678</p>
-                    <a
-                      href="https://wa.me/50612345678?text=Hola,%20quiero%20hacer%20un%20pedido"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-block mt-2 bg-[#1F2937] hover:bg-[#374151] text-white font-medium py-2 px-4 rounded-md transition-colors"
-                    >
-                      Ordenar por WhatsApp
-                    </a>
+                    <h3 className="font-semibold text-primary">WhatsApp</h3>
+                    <p className="text-white-2">+506 1234-5678</p>
+                    <WhatsAppButton className="inline-block mt-2 bg-ternary-1 hover:bg-ternary-3 active:bg-ternary-2 text-white-1 font-medium py-2 px-4 rounded-md transition-colors"></WhatsAppButton>
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <InstagramIcon className="w-6 h-6 text-[#8B6F47] mr-3 flex-shrink-0 mt-0.5" />
+                  <InstagramIcon className="w-6 h-6 text-secondary-1 mr-3 flex-shrink-0 mt-0.5" />
                   <div>
-                    <h3 className="font-semibold text-[#2D1B14]">Instagram</h3>
+                    <h3 className="font-semibold text-primary">Instagram</h3>
                     <a
-                      href="https://instagram.com/dondecarla"
+                      href="https://www.instagram.com/p/DBUyxSAx3kf/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-[#8B6F47] hover:text-[#9d8259]"
+                      className="text-secondary-1 hover:text-secondary-3 active:text-secondary-2"
                     >
                       @dondecarla
                     </a>
@@ -96,7 +92,7 @@ const Contact = () => {
               </div>
               <div className="h-64 md:h-80 rounded-lg overflow-hidden shadow-md">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15721.096697724362!2d-83.75551161298818!3d9.925640112744494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0d5a26bd7e887%3A0x9c1e8c0a0a7afa6e!2sJuan%20Vi%C3%B1as%2C%20Cartago%20Province%2C%20Costa%20Rica!5e0!3m2!1sen!2sus!4v1652432193696!5m2!1sen!2sus"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3930.4500462559276!2d-83.74132442500607!3d9.896423690203747!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0d7738f7306e7%3A0xab310527000c6174!2sDonde%20Carla!5e0!3m2!1ses!2scr!4v1750784570277!5m2!1ses!2scr"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
@@ -109,17 +105,17 @@ const Contact = () => {
             </div>
 
             <div>
-              <h2 className="text-2xl font-bold text-[#2D1B14] mb-6">
+              <h2 className="text-2xl font-bold text-primary mb-6">
                 Envíanos un Mensaje
               </h2>
               <form
                 onSubmit={handleSubmit}
-                className="bg-[#F5F1EB] p-6 rounded-lg shadow-md"
+                className="bg-background-beige p-6 rounded-lg shadow-md"
               >
                 <div className="mb-4">
                   <label
                     htmlFor="name"
-                    className="block text-[#2D1B14] font-medium mb-2"
+                    className="block text-secondary-1 font-medium mb-2"
                   >
                     Nombre
                   </label>
@@ -127,13 +123,13 @@ const Contact = () => {
                     type="text"
                     id="name"
                     required
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#8B6F47] focus:border-transparent"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-secondary-1 focus:border-transparent"
                   />
                 </div>
                 <div className="mb-4">
                   <label
                     htmlFor="email"
-                    className="block text-[#2D1B14] font-medium mb-2"
+                    className="block text-secondary-1 font-medium mb-2"
                   >
                     Correo Electrónico
                   </label>
@@ -147,7 +143,7 @@ const Contact = () => {
                 <div className="mb-4">
                   <label
                     htmlFor="phone"
-                    className="block text-[#2D1B14] font-medium mb-2"
+                    className="block text-secondary-1 font-medium mb-2"
                   >
                     Teléfono
                   </label>
@@ -160,7 +156,7 @@ const Contact = () => {
                 <div className="mb-4">
                   <label
                     htmlFor="subject"
-                    className="block text-[#2D1B14] font-medium mb-2"
+                    className="block text-secondary-1 font-medium mb-2"
                   >
                     Asunto
                   </label>
@@ -174,7 +170,7 @@ const Contact = () => {
                 <div className="mb-6">
                   <label
                     htmlFor="message"
-                    className="block text-[#2D1B14] font-medium mb-2"
+                    className="block text-secondary-1 font-medium mb-2"
                   >
                     Mensaje
                   </label>
@@ -187,7 +183,7 @@ const Contact = () => {
                 </div>
                 <button
                   type="submit"
-                  className="w-full bg-[#1F2937] hover:bg-[#374151] text-white font-medium py-3 px-4 rounded-md transition-colors"
+                  className="w-full bg-ternary-1 hover:bg-ternary-3 active:bg-ternary-2 text-white-1 font-medium py-3 px-4 rounded-md transition-colors"
                 >
                   Enviar Mensaje
                 </button>
