@@ -37,7 +37,7 @@ const Header = () => {
             to="/"
             className={({ isActive }) =>
               `text-black-1 font-medium hover:text-secondary-3 active:text-secondary-2 transition-colors ${
-                isActive ? "border-b-2 border-secondary-1 pb-1" : ""
+                isActive ? "border-b-2 border-secondary-1 text-secondary-1 pb-1" : ""
               }`
             }
           >
@@ -47,7 +47,7 @@ const Header = () => {
             to="/menu"
             className={({ isActive }) =>
               `text-black-1 font-medium hover:text-secondary-3 active:text-secondary-2 transition-colors ${
-                isActive ? "border-b-2 border-secondary-1 pb-1" : ""
+                isActive ? "border-b-2 border-secondary-1 text-secondary-1 pb-1" : ""
               }`
             }
           >
@@ -57,7 +57,7 @@ const Header = () => {
             to="/about"
             className={({ isActive }) =>
               `text-black-1 font-medium hover:text-secondary-3 active:text-secondary-2 transition-colors ${
-                isActive ? "border-b-2 border-secondary-1 pb-1" : ""
+                isActive ? "border-b-2 border-secondary-1 text-secondary-1 pb-1" : ""
               }`
             }
           >
@@ -67,7 +67,7 @@ const Header = () => {
             to="/contact"
             className={({ isActive }) =>
               `text-black-1 font-medium hover:text-secondary-3 active:text-secondary-2 transition-colors ${
-                isActive ? "border-b-2 border-secondary-1 pb-1" : ""
+                isActive ? "border-b-2 border-secondary-1 text-secondary-1 pb-1" : ""
               }`
             }
           >

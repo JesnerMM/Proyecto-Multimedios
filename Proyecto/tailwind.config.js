@@ -23,7 +23,8 @@ export default {
           1: "#D4AF37"
         },
         white: {
-          1: "#FFFFFF"
+          1: "#FFFFFF",
+          2:"#4D4D4D"
         },
         black: {
           1: "#000000"

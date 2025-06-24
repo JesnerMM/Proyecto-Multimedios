@@ -27,7 +27,7 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4">
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/p/DBUyxSAx3kf/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"

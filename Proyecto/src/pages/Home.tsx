@@ -1,35 +1,41 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { ArrowRightIcon, MapPinIcon, ClockIcon } from "lucide-react";
+import InstagramFeed from "../components/layout/instagramFeed/instagramFeed";
+import {
+  ArrowRightIcon,
+  MapPinIcon,
+  ClockIcon,
+  InstagramIcon,
+} from "lucide-react";
 import WhatsAppButton from "../components/ui/WhatsAppButton";
 
 const Home = () => {
   return (
     <div className="w-full">
-      <section className="relative bg-[#2D1B14] text-white">
+      <section className="relative text-white">
         <div className="absolute inset-0 bg-black opacity-30 z-10"></div>
-        <div className="relative h-[50vh] md:h-[50vh] flex items-center justify-center overflow-hidden">
+        <div className="relative h-[50vh] md:h-[46vh] flex items-center justify-center overflow-hidden">
           <img
             src="src/assets/banner.jpeg"
             alt="Interior de Donde Carla"
             className="absolute object-cover inset-0 w-full h-full"
           />
           <div className="container mx-auto px-4 z-20 text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-8xl font-bold mb-4">
+            <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-4">
               <span className="font-playfair text-white-1">Donde </span>
               <span className="font-dancing text-golden-1">Carla</span>
             </h1>
             <p className="text-white-1 text-xl md:text-2xl m-8 max-w-2xl mx-auto">
               Disfruta de la mejor comida y siéntete como en casa.
             </p>
-            <div className="flex flex-row justify-center gap-4">
+            <div className="flex flex-row justify-center md:gap-40">
               <Link
                 to="/menu"
-                className="flex items-center justify-center bg-secondary-1 hover:bg-secondary-3 active:bg-secondary-2 text-white-1 font-medium text-sm py-2.5 px-4 rounded-md w-40 text-center"
+                className="flex items-center justify-center bg-secondary-1 hover:bg-secondary-3 active:bg-secondary-2 text-white-1 font-medium text-sm py-2.5 px-4 rounded-md w-48 text-center"
               >
                 Ver Menú
               </Link>
-              <WhatsAppButton className="w-48 text-white-1 text-sm py-2.5 px-4" />
+              <WhatsAppButton className="w-48 bg-ternary-1 hover:bg-ternary-3 active:bg-ternary-2 text-white-1 text-sm py-2.5 px-4" />
             </div>
           </div>
         </div>
@@ -39,10 +45,10 @@ const Home = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div>
-              <h2 className="text-3xl font-bold text-black-1 mb-4">
+              <h2 className="text-3xl font-bold text-primary mb-4">
                 Bienvenidos a Donde Carla
               </h2>
-              <p className="text-black-1 mb-6">
+              <p className="text-white-2 mb-6">
                 Desde hace 2 años, Donde Carla ha sido el destino favorito para
                 disfrutar de comida casera de alta calidad en Juan Viñas.
               </p>
@@ -65,9 +71,9 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="py-16 bg-[#F5F1EB]">
+      <section className="py-16 bg-background-beige">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center text-[#2D1B14] mb-12">
+          <h2 className="text-3xl font-bold text-center text-primary mb-12">
             Nuestros Platillos Destacados
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -83,14 +89,14 @@ const Home = () => {
                 />
                 <div className="p-4">
                   <div className="flex justify-between items-center mb-2">
-                    <h3 className="text-xl font-semibold text-[#2D1B14]">
+                    <h3 className="text-xl font-semibold text-primary">
                       {item.name}
                     </h3>
-                    <span className="text-[#8B6F47] font-bold">
+                    <span className="text-secondary-1 font-bold">
                       ₡{item.price}
                     </span>
                   </div>
-                  <p className="text-gray-600 text-sm">{item.description}</p>
+                  <p className="text-white-2 text-sm">{item.description}</p>
                 </div>
               </div>
             ))}
@@ -98,7 +104,7 @@ const Home = () => {
           <div className="mt-10 text-center">
             <Link
               to="/menu"
-              className="inline-flex items-center bg-[#1F2937] hover:bg-[#374151] text-white font-medium py-3 px-6 rounded-md transition-colors"
+              className="inline-flex items-center bg-ternary-1 hover:bg-ternary-3 active:bg-ternary-2 text-white-1 font-medium py-3 px-6 rounded-md transition-colors"
             >
               Ver Menú Completo
               <ArrowRightIcon size={16} className="ml-2" />
@@ -107,24 +113,24 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-background-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div className="order-2 md:order-1">
-              <h2 className="text-3xl font-bold text-[#2D1B14] mb-4">
+              <h2 className="text-3xl font-bold text-primary mb-4">
                 Encuéntranos
               </h2>
-              <p className="text-gray-700 mb-6">
+              <p className="text-white-2 mb-6">
                 Estamos ubicados en el corazón de Juan Viñas, con fácil acceso y
                 estacionamiento disponible.
               </p>
-              <div className="space-y-3 mb-6">
+              <div className="space-y-3 mb-6 text-white-2">
                 <div className="flex items-start">
-                  <MapPinIcon className="w-5 h-5 text-[#8B6F47] mr-2 flex-shrink-0 mt-0.5" />
+                  <MapPinIcon className="w-5 h-5 text-secondary-1 mr-2 flex-shrink-0 mt-0.5" />
                   <p>Juan Viñas, Cartago, Costa Rica</p>
                 </div>
                 <div className="flex items-start">
-                  <ClockIcon className="w-5 h-5 text-[#8B6F47] mr-2 flex-shrink-0 mt-0.5" />
+                  <ClockIcon className="w-5 h-5 text-secondary-1 mr-2 flex-shrink-0 mt-0.5" />
                   <div>
                     <p>Lunes: 11:00 AM - 8:00 PM</p>
                     <p>Martes: Cerrado</p>
@@ -138,7 +144,7 @@ const Home = () => {
               </div>
               <Link
                 to="/contact"
-                className="inline-flex items-center text-[#8B6F47] font-medium hover:text-[#9d8259] transition-colors"
+                className="inline-flex items-center text-secondary-1 font-medium hover:text-secondary-3 active:text-secondary-2 transition-colors"
               >
                 Ver ubicación y contacto
                 <ArrowRightIcon size={16} className="ml-2" />
@@ -151,6 +157,32 @@ const Home = () => {
                 className="w-full h-full object-cover"
               />
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-background-beige">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl font-bold text-[#2D1B14] mb-4">
+              Síguenos en Instagram
+            </h2>
+            <p className="text-gray-700 max-w-2xl mx-auto">
+              Mantente al día con nuestras últimas creaciones y promociones
+              especiales siguiéndonos en Instagram.
+            </p>
+          </div>
+          <InstagramFeed className="w-full" />
+          <div className="text-center mt-8">
+            <a
+              href="https://www.instagram.com/p/DBUyxSAx3kf/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center font-medium text-secondary-1 hover:text-secondary-3 active:text-secondary-2"
+            >
+              <InstagramIcon size={20} className="mr-2" />
+              @dondecarla
+            </a>
           </div>
         </div>
       </section>

@@ -1,5 +1,4 @@
 import React from "react";
-import InstagramFeed from "../components/layout/instagramFeed/instagramFeed";
 import {
   MapPinIcon,
   ClockIcon,
@@ -8,7 +7,7 @@ import {
 } from "lucide-react";
 
 const Contact = () => {
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: any) => {
     e.preventDefault();
     alert("Mensaje enviado. ¡Gracias por contactarnos!");
   };
@@ -194,32 +193,6 @@ const Contact = () => {
                 </button>
               </form>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 bg-[#F5F1EB]">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-10">
-            <h2 className="text-3xl font-bold text-[#2D1B14] mb-4">
-              Síguenos en Instagram
-            </h2>
-            <p className="text-gray-700 max-w-2xl mx-auto">
-              Mantente al día con nuestras últimas creaciones y promociones
-              especiales siguiéndonos en Instagram.
-            </p>
-          </div>
-          <InstagramFeed widgetId="289452" className="mx-auto max-w-6xl" />
-          <div className="text-center mt-8">
-            <a
-              href="https://instagram.com/dondecarla"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center text-[#8B6F47] font-medium hover:text-[#9d8259]"
-            >
-              <InstagramIcon size={20} className="mr-2" />
-              @dondecarla
-            </a>
           </div>
         </div>
       </section>
