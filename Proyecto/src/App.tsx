@@ -12,7 +12,7 @@ export function App() {
   return <Router>
       <div className="box-border flex flex-col min-h-screen bg-background-white overflow-hidden">
         <Header />
-        <main className="flex-grow">
+        <main className="flex-grow mt-16">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/menu" element={<Menu />} />
