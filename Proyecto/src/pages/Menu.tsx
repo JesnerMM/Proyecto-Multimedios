@@ -266,7 +266,7 @@ const menuItems = [
     price: "3000",
     description: "Patacones crujientes acompañados de frijoles molidos y guacamole fresco.",
     category: "entradas",
-    image: "https://images.unsplash.com/photo-1626198226928-ca8c9af16999?q=80&w=2070&auto=format&fit=crop",
+    image: "src/assets/productos/entradas/producto-patacones-con-frijoles-molidos-carne-mechada-y-guacamole.jpeg",
     alt: "Patacones con frijoles y guacamole",
     isSpecial: false
   },
@@ -275,7 +275,7 @@ const menuItems = [
     price: "2000",
     description: "Papas fritas crujientes en porción individual.",
     category: "entradas",
-    image: "https://images.unsplash.com/photo-1630404495572-c2e36d4f40f3?q=80&w=2070&auto=format&fit=crop",
+    image: "src/assets/productos/entradas/producto-orden-de-papas-fritas.jpg",
     alt: "Orden de papas fritas",
     isSpecial: false
   },
@@ -284,7 +284,7 @@ const menuItems = [
     price: "2000",
     description: "Tortillas chips acompañadas de guacamole y frijoles molidos.",
     category: "entradas",
-    image: "https://images.unsplash.com/photo-1571805618149-3a772570ebcd?q=80&w=2070&auto=format&fit=crop",
+    image: "src/assets/productos/entradas/producto-chips-guacamole-y-frijoles.jpg",
     alt: "Chips con guacamole y frijoles",
     isSpecial: false
   },
@@ -293,7 +293,7 @@ const menuItems = [
     price: "1500",
     description: "Deliciosas doraditas crocantes.",
     category: "entradas",
-    image: "https://images.unsplash.com/photo-1599481238640-4c1288750d7a?q=80&w=2070&auto=format&fit=crop",
+    image: "src/assets/productos/entradas/producto-doraditas.jpg",
     alt: "Doraditas crocantes",
     isSpecial: false
   },
@@ -302,7 +302,7 @@ const menuItems = [
     price: "2500",
     description: "Clásico sándwich de jamón y queso con pan fresco.",
     category: "sandwiches",
-    image: "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?q=80&w=2070&auto=format&fit=crop",
+    image: "src/assets/productos/sandwiches/producto-sandwich-de-jamon-y-queso.avif",
     alt: "Sándwich de jamón y queso",
     isSpecial: false
   },
@@ -311,7 +311,7 @@ const menuItems = [
     price: "2500",
     description: "Sándwich relleno de jugosa carne mechada.",
     category: "sandwiches",
-    image: "https://images.unsplash.com/photo-1559843445-53f32bbfe8e7?q=80&w=2070&auto=format&fit=crop",
+    image: "src/assets/productos/sandwiches/producto-sandwich-de-carne-mechada.jpeg",
     alt: "Sándwich de carne mechada",
     isSpecial: false
   },
@@ -320,7 +320,7 @@ const menuItems = [
     price: "2500",
     description: "Sándwich con tierno pollo y vegetales frescos.",
     category: "sandwiches",
-    image: "https://images.unsplash.com/photo-1606755456206-b25206bfa233?q=80&w=2070&auto=format&fit=crop",
+    image: "src/assets/productos/sandwiches/producto-sandwich-de-pollo.webp",
     alt: "Sándwich de pollo",
     isSpecial: false
   },
@@ -329,7 +329,7 @@ const menuItems = [
     price: "1000",
     description: "Empanada rellena de queso derretido.",
     category: "empanadas",
-    image: "https://images.unsplash.com/photo-1626804475297-41608ea09aeb?q=80&w=2070&auto=format&fit=crop",
+    image: "src/assets/productos/empanadas/producto-empanada-de-queso.jpeg",
     alt: "Empanada de queso",
     isSpecial: false
   },
@@ -338,7 +338,7 @@ const menuItems = [
     price: "1200",
     description: "Empanada rellena de frijoles molidos y queso.",
     category: "empanadas",
-    image: "https://images.unsplash.com/photo-1626804475297-41608ea09aeb?q=80&w=2070&auto=format&fit=crop",
+    image: "src/assets/productos/empanadas/producto-empanada-_de_frijol_y_queso.jpeg",
     alt: "Empanada de frijol con queso",
     isSpecial: false
   },
@@ -347,7 +347,7 @@ const menuItems = [
     price: "1400",
     description: "Empanada rellena de sabrosa carne mechada.",
     category: "empanadas",
-    image: "https://images.unsplash.com/photo-1626804475297-41608ea09aeb?q=80&w=2070&auto=format&fit=crop",
+    image: "src/assets/productos/empanadas/producto-empanada-de-carne.jpg",
     alt: "Empanada de carne mechada",
     isSpecial: false
   },
@@ -356,7 +356,7 @@ const menuItems = [
     price: "3000",
     description: "Pan brioche, filete de pollo empanizado, coleslaw, queso americano, lechuga, salsa chipotle acompañada de papas fritas.",
     category: "hamburguesas",
-    image: "https://images.unsplash.com/photo-1568901220263-d3a90623a9d9?q=80&w=2070&auto=format&fit=crop",
+    image: "src/assets/productos/hamburguesas/producto-hamburguesa-de-la-casa.jpeg",
     alt: "Hamburguesa de la casa",
     isSpecial: true
   },
@@ -365,7 +365,7 @@ const menuItems = [
     price: "4500",
     description: "Pan brioche, Torta angus 160g, mayonesa de la casa, guacamole, lechuga, tomate, cebolla, tocineta acompañada de papas fritas.",
     category: "hamburguesas",
-    image: "https://images.unsplash.com/photo-1565299507177-b0ac66763828?q=80&w=2070&auto=format&fit=crop",
+    image: "src/assets/productos/hamburguesas/producto-hamburguesa-angus.jpg",
     alt: "Hamburguesa Angus",
     isSpecial: true
   },
@@ -374,7 +374,7 @@ const menuItems = [
     price: "1500",
     description: "Pan, lechuga, tomate, jamón queso torta y salsas acompañada de papas fritas.",
     category: "hamburguesas",
-    image: "https://images.unsplash.com/photo-1582196016295-f8c10f6d0716?q=80&w=2070&auto=format&fit=crop",
+    image: "src/assets/productos/hamburguesas/producto-hamburguesa-especial-pequeña.jpg",
     alt: "Hamburguesa especial pequeña",
     isSpecial: false
   },
@@ -383,7 +383,7 @@ const menuItems = [
     price: "3000",
     description: "Frijoles, pico de gallo, guacamole, carne mechada, salsa de queso, mayonesa de la casa y natilla.",
     category: "papas-fritas",
-    image: "https://images.unsplash.com/photo-1630404495572-c2e36d4f40f3?q=80&w=2070&auto=format&fit=crop",
+    image: "src/assets/productos/papas fritas/producto-papas-de-la-casa.webp",
     alt: "Papas de la casa",
     isSpecial: true
   },
@@ -392,7 +392,7 @@ const menuItems = [
     price: "4000",
     description: "Salsa de queso, natilla, pico de gallo y guacamole con 10 camarones empanizados.",
     category: "papas-fritas",
-    image: "https://images.unsplash.com/photo-1630404495572-c2e36d4f40f3?q=80&w=2070&auto=format&fit=crop",
+    image: "src/assets/productos/papas fritas/producto-papas-dode-carla.jpeg",
     alt: "Papas Donde Carla con camarones",
     isSpecial: true
   },
@@ -401,7 +401,7 @@ const menuItems = [
     price: "3500",
     description: "Salsa de queso, natilla y tocineta.",
     category: "papas-fritas",
-    image: "https://images.unsplash.com/photo-1630404495572-c2e36d4f40f3?q=80&w=2070&auto=format&fit=crop",
+    image: "src/assets/productos/papas fritas/producto-bacon-fries.jpeg",
     alt: "Papas con bacon",
     isSpecial: false
   },
@@ -410,7 +410,7 @@ const menuItems = [
     price: "2500",
     description: "Porción pequeña de papas fritas.",
     category: "papas-fritas",
-    image: "https://images.unsplash.com/photo-1630404495572-c2e36d4f40f3?q=80&w=2070&auto=format&fit=crop",
+    image: "src/assets/productos/papas fritas/producto-orden-de-papas-fritas-pequeñas.jpg",
     alt: "Orden pequeña de papas fritas",
     isSpecial: false
   },
@@ -419,7 +419,7 @@ const menuItems = [
     price: "1500",
     description: "Porción grande de papas fritas.",
     category: "papas-fritas",
-    image: "https://images.unsplash.com/photo-1630404495572-c2e36d4f40f3?q=80&w=2070&auto=format&fit=crop",
+    image: "src/assets/productos/papas fritas/producto-orden-de-papas-fritas-grandes.jpeg",
     alt: "Orden grande de papas fritas",
     isSpecial: false
   },
@@ -428,7 +428,7 @@ const menuItems = [
     price: "4500",
     description: "Papas fritas con salchichas y salsas.",
     category: "papas-fritas",
-    image: "https://images.unsplash.com/photo-1630404495572-c2e36d4f40f3?q=80&w=2070&auto=format&fit=crop",
+    image: "src/assets/productos/papas fritas/producto-orden-de-salchipapas.jpg",
     alt: "Salchipapas",
     isSpecial: false
   },
@@ -437,7 +437,7 @@ const menuItems = [
     price: "3000",
     description: "Acompañado de 5 patacones, frijoles molidos y ensalada.",
     category: "otros-platos",
-    image: "https://images.unsplash.com/photo-1625943555419-56a2cb596640?q=80&w=2070&auto=format&fit=crop",
+    image: "src/assets/productos/otros platos/producto-plato-de-chicharrones.jpg",
     alt: "Plato de chicharrones",
     isSpecial: false
   },
@@ -446,7 +446,7 @@ const menuItems = [
     price: "3000",
     description: "Frijoles molidos, carne mechada, pico de gallo y guacamole.",
     category: "otros-platos",
-    image: "https://images.unsplash.com/photo-1625943555419-56a2cb596640?q=80&w=2070&auto=format&fit=crop",
+    image: "src/assets/productos/otros platos/producto-plato-de-canastas-de-patacoenes-con-pico-de-gallo.jpeg",
     alt: "Canastas de patacón",
     isSpecial: false
   },
@@ -455,7 +455,7 @@ const menuItems = [
     price: "3000",
     description: "Frijoles, guacamole, tomate, lechuga, carne mechada, salsa de queso y mayonesa de la casa acompañado de papas fritas.",
     category: "tortilla-harina",
-    image: "https://images.unsplash.com/photo-1524385392686-e7e003185360?q=80&w=2070&auto=format&fit=crop",
+    image: "src/assets/productos/tortilla de harina/productos-burrito-de-carne-con-papas.webp",
     alt: "Burrito de carne",
     isSpecial: false
   },
@@ -464,7 +464,7 @@ const menuItems = [
     price: "3000",
     description: "Lechuga, tomate, salsa de queso y mayonesa de la casa acompañado de papas fritas.",
     category: "tortilla-harina",
-    image: "https://images.unsplash.com/photo-1524385392686-e7e003185360?q=80&w=2070&auto=format&fit=crop",
+    image: "src/assets/productos/tortilla de harina/productos-burrito-de-pollo-con-papas.jpeg",
     alt: "Burrito de pollo",
     isSpecial: false
   },
@@ -473,7 +473,7 @@ const menuItems = [
     price: "3000",
     description: "Lechuga, tomate, salsa de queso y mayonesa de la casa acompañado de papas fritas.",
     category: "tortilla-harina",
-    image: "https://images.unsplash.com/photo-1524385392686-e7e003185360?q=80&w=2070&auto=format&fit=crop",
+    image: "src/assets/productos/tortilla de harina/productos-burrito-de-camaron-empanizado.jpg",
     alt: "Burrito de camarones",
     isSpecial: false
   },
@@ -482,7 +482,7 @@ const menuItems = [
     price: "3000",
     description: "Frijoles molidos, queso mozzarella y carne mechada, acompañado de papas fritas.",
     category: "tortilla-harina",
-    image: "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?q=80&w=2070&auto=format&fit=crop",
+    image: "src/assets/productos/tortilla de harina/productos-quesadilla-de-carne.jpg",
     alt: "Quesadilla de carne",
     isSpecial: false
   },
@@ -491,7 +491,7 @@ const menuItems = [
     price: "3000",
     description: "Tortilla de harina frita rellena de jamón, queso amarillo y carne mechada acompañado de ensalada y papas fritas.",
     category: "tortilla-harina",
-    image: "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?q=80&w=2070&auto=format&fit=crop",
+    image: "src/assets/productos/tortilla de harina/productos-flautas-de-carne.webp",
     alt: "Flauta de carne",
     isSpecial: false
   },
@@ -500,7 +500,7 @@ const menuItems = [
     price: "3000",
     description: "Triangulitos fritos rellenos de carne mechada, acompañado de ensalada y papas fritas.",
     category: "tortilla-harina",
-    image: "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?q=80&w=2070&auto=format&fit=crop",
+    image: "src/assets/productos/tortilla de harina/productos-triangulitos-de-carne-con-ensalada-y-papas.jpeg",
     alt: "Triangulitos de carne",
     isSpecial: false
   },
@@ -509,7 +509,7 @@ const menuItems = [
     price: "3000",
     description: "Acompañado de salsa tártara y papas fritas.",
     category: "pescado",
-    image: "https://images.unsplash.com/photo-1599481238640-4c1288750d7a?q=80&w=2070&auto=format&fit=crop",
+    image: "src/assets/productos/pescado/producto-deditos-de-pescado.png",
     alt: "Deditos de pescado",
     isSpecial: false
   },
@@ -518,7 +518,7 @@ const menuItems = [
     price: "3000",
     description: "Acompañado de mostaza miel y papas fritas.",
     category: "pollo-lomo",
-    image: "https://images.unsplash.com/photo-1599481238640-4c1288750d7a?q=80&w=2070&auto=format&fit=crop",
+    image: "src/assets/productos/pollo y lomo/producto-deditos-de-pollo-con-papas.jpg",
     alt: "Deditos de pollo",
     isSpecial: false
   },
@@ -527,7 +527,7 @@ const menuItems = [
     price: "3000",
     description: "Acompañado de ensalada, salsa tártara y papas fritas.",
     category: "pescado",
-    image: "https://images.unsplash.com/photo-1599481238640-4c1288750d7a?q=80&w=2070&auto=format&fit=crop",
+    image: "src/assets/productos/pescado/producto-pescado-empanizado-con-papas-y-ensalada.jpeg",
     alt: "Pescado empanizado",
     isSpecial: false
   },
@@ -536,7 +536,7 @@ const menuItems = [
     price: "3000",
     description: "Acompañado de ensalada y papas fritas.",
     category: "pescado",
-    image: "https://images.unsplash.com/photo-1599481238640-4c1288750d7a?q=80&w=2070&auto=format&fit=crop",
+    image: "src/assets/productos/pescado/producto-chuleta-de-pescado.png",
     alt: "Chuleta de pescado",
     isSpecial: false
   },
@@ -545,7 +545,7 @@ const menuItems = [
     price: "3000",
     description: "Acompañado de repollo, pico de gallo y papas fritas.",
     category: "tortilla-maiz",
-    image: "https://images.unsplash.com/photo-1562967912-3269d724036f?q=80&w=2070&auto=format&fit=crop",
+    image: "src/assets/productos/tortilla de maiz/producto-taco-sencillo-con-papas-y-pico-de-gallo.jpg",
     alt: "Taco sencillo",
     isSpecial: false
   },
@@ -554,7 +554,7 @@ const menuItems = [
     price: "3000",
     description: "Acompañado de repollo, pico de gallo y papas fritas.",
     category: "tortilla-maiz",
-    image: "https://images.unsplash.com/photo-1562967912-3269d724036f?q=80&w=2070&auto=format&fit=crop",
+    image: "src/assets/productos/tortilla de maiz/producto-taco-doble-especial-con-papas-y-pico-de-gallo.jpg",
     alt: "Taco doble especial",
     isSpecial: false
   },
@@ -563,7 +563,7 @@ const menuItems = [
     price: "3000",
     description: "Frijoles molidos, carne mechada, lechuga, chimichurri acompañado de papas fritas.",
     category: "tortilla-maiz",
-    image: "https://images.unsplash.com/photo-1562967912-3269d724036f?q=80&w=2070&auto=format&fit=crop",
+    image: "src/assets/productos/tortilla de maiz/producto-chalupa-papas-y-pico-de-gallo.webp",
     alt: "Chalupa",
     isSpecial: false
   },
@@ -572,7 +572,7 @@ const menuItems = [
     price: "3000",
     description: "Frijoles molidos, carne mechada, pico de gallo, guacamole, salsa de queso, salsa tomate, mayonesa de la casa y natilla.",
     category: "tortilla-maiz",
-    image: "https://images.unsplash.com/photo-1571805618149-3a772570ebcd?q=80&w=2070&auto=format&fit=crop",
+    image: "src/assets/productos/tortilla de maiz/producto-nachos-donde-carla.jpg",
     alt: "Nachos Donde Carla",
     isSpecial: true
   },
@@ -581,7 +581,7 @@ const menuItems = [
     price: "3000",
     description: "Arroz, frijoles, ensalada, papas fritas y refresco natural.",
     category: "casados",
-    image: "https://images.unsplash.com/photo-1599789197514-47270cd526b4?q=80&w=2070&auto=format&fit=crop",
+    image: "src/assets/productos/casados/producto-casado-de-fajitas-de-pollo.jfif",
     alt: "Casado de fajitas de pollo",
     isSpecial: false
   },
@@ -590,7 +590,7 @@ const menuItems = [
     price: "3500",
     description: "Arroz, frijoles, ensalada, papas fritas y refresco natural.",
     category: "casados",
-    image: "https://images.unsplash.com/photo-1599789197514-47270cd526b4?q=80&w=2070&auto=format&fit=crop",
+    image: "src/assets/productos/casados/producto-casado-de-fajitas-de-lomo.jpg",
     alt: "Casado de fajitas de lomo",
     isSpecial: false
   },
@@ -599,7 +599,7 @@ const menuItems = [
     price: "3500",
     description: "Arroz, frijoles, ensalada, papas fritas y refresco natural.",
     category: "casados",
-    image: "https://images.unsplash.com/photo-1599789197514-47270cd526b4?q=80&w=2070&auto=format&fit=crop",
+    image: "src/assets/productos/casados/producto-casado-de-fajitas-mixtas.jpg",
     alt: "Casado de fajitas mixtas",
     isSpecial: false
   },
@@ -608,7 +608,7 @@ const menuItems = [
     price: "3000",
     description: "Arroz, frijoles, ensalada, papas fritas y refresco natural.",
     category: "casados",
-    image: "https://images.unsplash.com/photo-1599789197514-47270cd526b4?q=80&w=2070&auto=format&fit=crop",
+    image: "src/assets/productos/casados/producto-casado-de-chuleta.jpg",
     alt: "Casado de chuleta",
     isSpecial: false
   },
@@ -617,7 +617,7 @@ const menuItems = [
     price: "3500",
     description: "Arroz, frijoles, ensalada, papas fritas y refresco natural.",
     category: "casados",
-    image: "https://images.unsplash.com/photo-1599789197514-47270cd526b4?q=80&w=2070&auto=format&fit=crop",
+    image: "src/assets/productos/casados/producto-casado-de-filet-de-pescado.jpg",
     alt: "Casado de chuleta de pescado",
     isSpecial: false
   },
@@ -626,7 +626,7 @@ const menuItems = [
     price: "3000",
     description: "Arroz, frijoles, ensalada, papas fritas y refresco natural.",
     category: "casados",
-    image: "https://images.unsplash.com/photo-1599789197514-47270cd526b4?q=80&w=2070&auto=format&fit=crop",
+    image: "src/assets/productos/casados/producto-casado-de-pesacado.jpeg",
     alt: "Casado de pescado",
     isSpecial: false
   },
@@ -635,7 +635,7 @@ const menuItems = [
     price: "4500",
     description: "Acompañado de ensalada y papas fritas.",
     category: "pollo-lomo",
-    image: "https://images.unsplash.com/photo-1594221708779-94832f4320d1?q=80&w=2070&auto=format&fit=crop",
+    image: "src/assets/productos/pollo y lomo/producto-fajitas-de-pollo-con-papas-y-ensalada.jpg",
     alt: "Plato de fajitas de pollo con ensalada y papas fritas",
     isSpecial: false
   },
@@ -644,7 +644,7 @@ const menuItems = [
     price: "4500",
     description: "Acompañado de ensalada y papas fritas. Opciones: Fajitas de pollo, Filete de pollo a la plancha, Filete de pollo empanizado, Fajitas de lomo, Fajitas mixtas.",
     category: "pollo-lomo",
-    image: "https://images.unsplash.com/photo-1594221708779-94832f4320d1?q=80&w=2070&auto=format&fit=crop",
+    image: "src/assets/productos/pollo y lomo/producto-filet-de-pollo-a-la-plancha-con-papas-y-ensalada.png",
     alt: "Plato de filete de pollo a la plancha con ensalada y papas fritas",
     isSpecial: false
   },
@@ -653,16 +653,16 @@ const menuItems = [
     price: "4500",
     description: "Acompañado de ensalada y papas fritas. Opciones: Fajitas de pollo, Filete de pollo a la plancha, Filete de pollo empanizado, Fajitas de lomo, Fajitas mixtas.",
     category: "pollo-lomo",
-    image: "https://images.unsplash.com/photo-1594221708779-94832f4320d1?q=80&w=2070&auto=format&fit=crop",
+    image: "src/assets/productos/pollo y lomo/producto-pollo-empanizado-con-papas.jpg",
     alt: "Plato de filete de pollo empanizado con ensalada y papas fritas",
     isSpecial: false
   },
   {
-    name: "Fajitos de lomo",
+    name: "Fajitas de lomo",
     price: "4500",
     description: "Acompañado de ensalada y papas fritas. Opciones: Fajitas de pollo, Filete de pollo a la plancha, Filete de pollo empanizado, Fajitas de lomo, Fajitas mixtas.",
     category: "pollo-lomo",
-    image: "https://images.unsplash.com/photo-1594221708779-94832f4320d1?q=80&w=2070&auto=format&fit=crop",
+    image: "src/assets/productos/pollo y lomo/producto-fajitas-de-lomo-con-papas-y-ensalada.jpeg",
     alt: "Plato de fajitos de lomo con ensalada y papas fritas",
     isSpecial: false
   },
@@ -671,7 +671,7 @@ const menuItems = [
     price: "5000",
     description: "Acompañado de ensalada y papas fritas.",
     category: "pollo-lomo",
-    image: "https://images.unsplash.com/photo-1594221708779-94832f4320d1?q=80&w=2070&auto=format&fit=crop",
+    image: "src/assets/productos/pollo y lomo/producto-fajitas-de-mixtas-con-papas-y-ensalada.png",
     alt: "Fajitas mixtas",
     isSpecial: true
   },
@@ -680,7 +680,7 @@ const menuItems = [
     price: "4500",
     description: "Acompañado de ensalada y papas fritas.",
     category: "camarones-pescado",
-    image: "https://images.unsplash.com/photo-1582236371757-b00350d7e6d0?q=80&w=2070&auto=format&fit=crop",
+    image: "src/assets/productos/camarones y pescado/producto-pescado-milanesa-con-papas-y-ensalada.png",
     alt: "Plato de pescado a la milanesa con ensalada y papas fritas",
     isSpecial: false
   },
@@ -689,7 +689,7 @@ const menuItems = [
     price: "4500",
     description: "Acompañado de ensalada y papas fritas.",
     category: "camarones-pescado",
-    image: "https://images.unsplash.com/photo-1582236371757-b00350d7e6d0?q=80&w=2070&auto=format&fit=crop",
+    image: "src/assets/productos/camarones y pescado/producto-pescado-a-la-plancha-con-papas-y-ensalada.png",
     alt: "Plato de pescado a la plancha con ensalada y papas fritas",
     isSpecial: false
   },
@@ -698,7 +698,7 @@ const menuItems = [
     price: "4500",
     description: "Acompañado de ensalada y papas fritas.",
     category: "camarones-pescado",
-    image: "https://images.unsplash.com/photo-1582236371757-b00350d7e6d0?q=80&w=2070&auto=format&fit=crop",
+    image: "src/assets/productos/camarones y pescado/producto-camarones-empanizados-con-papas-pico-de-gallo-y-guacamole.jpeg",
     alt: "Plato de camarones empanizados con ensalada y papas fritas",
     isSpecial: false
   },
@@ -707,7 +707,7 @@ const menuItems = [
     price: "4500",
     description: "Acompañado de ensalada y papas fritas.",
     category: "camarones-pescado",
-    image: "https://images.unsplash.com/photo-1582236371757-b00350d7e6d0?q=80&w=2070&auto=format&fit=crop",
+    image: "src/assets/productos/camarones y pescado/producto-camarones-al-ajillo-con-ensalda-y-pure.jpeg",
     alt: "Plato de camarones al ajillo con ensalada y papas fritas",
     isSpecial: false
   },
@@ -716,7 +716,7 @@ const menuItems = [
     price: "4500",
     description: "Acompañado de ensalada y papas fritas.",
     category: "camarones-pescado",
-    image: "https://images.unsplash.com/photo-1582236371757-b00350d7e6d0?q=80&w=2070&auto=format&fit=crop",
+    image: "src/assets/productos/camarones y pescado/producto-arroz-con-camarones-con-papas-y-ensalada.jpeg",
     alt: "Plato de arroz con camarones con ensalada y papas fritas",
     isSpecial: false
   },
@@ -725,7 +725,7 @@ const menuItems = [
     price: "5500",
     description: "Pargo rojo entero fresco, acompañado de ensalada y papas fritas.",
     category: "camarones-pescado",
-    image: "https://images.unsplash.com/photo-1593540026229-37f2c61e4b9c?q=80&w=2070&auto=format&fit=crop",
+    image: "src/assets/productos/camarones y pescado/producto-pargo-rojo-entero-con-ensalada.jpeg",
     alt: "Pargo rojo entero",
     isSpecial: true
   }
