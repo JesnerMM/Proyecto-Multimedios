@@ -2,7 +2,15 @@ import React from "react";
 import { CheckIcon } from "lucide-react";
 import 'animate.css';
 
-const About = () => {
+interface AboutProps {
+  useElementOnScreen: (options: any) => [React.RefObject<any>, boolean];
+}
+
+const About: React.FC<AboutProps> = ({ useElementOnScreen }) => {
+  const [bannerContactRef, bannerContacVisible] = useElementOnScreen({ threshold: 0.3 });
+  const [menuRef, menuVisible] = useElementOnScreen({ threshold: 0.1 });
+  const [ingredRef, ingredVisible] = useElementOnScreen({ threshold: 0.2 });
+  const [stepsRef, stepsVisible] = useElementOnScreen({ threshold: 0.1 });
   return (
     <div className="w-full bg-background-white">
       {/* Hero Section con imagen del banner sin botones */}
@@ -14,11 +22,11 @@ const About = () => {
             alt="Interior de Donde Carla"
             className="absolute inset-0 w-full h-full object-cover brightness-50 contrast-125"
           />
-          <div className="container mx-auto px-4 z-20 text-center text-white-1">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+          <div ref={bannerContactRef} className={`container mx-auto px-4 z-20 text-center text-white-1`}>
+            <h1 className={`text-4xl md:text-5xl lg:text-6xl font-bold mb-4" ${bannerContacVisible ? 'animate__animated animate__fadeInDown' : 'opacity-0'}`}>
               <span className="font-playfair">Sobre Nosotros </span>
             </h1>
-            <p className="text-xl md:text-2xl max-w-2xl mx-auto">
+            <p className={`text-xl md:text-2xl max-w-2xl mx-auto ${bannerContacVisible ? 'animate__animated animate__fadeInUp' : 'opacity-0'}`}>
               Conoce la historia y los valores detrás de Donde Carla
             </p>
           </div>
