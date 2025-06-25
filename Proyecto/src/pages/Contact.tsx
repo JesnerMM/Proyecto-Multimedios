@@ -7,14 +7,24 @@ import {
 } from "lucide-react";
 import WhatsAppButton from "../components/ui/WhatsAppButton";
 
-const Contact = () => {
-  const handleSubmit = (e: any) => {
+interface ContactProps {
+  useElementOnScreen: (options: any) => [React.RefObject<any>, boolean];
+}
+
+const Contact: React.FC<ContactProps> = ({ useElementOnScreen }) => {
+  // Referencias y visibilidad para animaciones
+  const [bannerRef, bannerVisible] = useElementOnScreen({ threshold: 0.3 });
+  const [infoRef, infoVisible] = useElementOnScreen({ threshold: 0 });
+  const [formRef, formVisible] = useElementOnScreen({ threshold: 0 });
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     alert("Mensaje enviado. ¡Gracias por contactarnos!");
   };
 
   return (
     <div className="w-full bg-background-white">
+      {/* Banner */}
       <section className="relative bg-[#2D1B14] text-white">
         <div className="absolute inset-0 bg-black opacity-30 z-10"></div>
         <div className="relative h-[50vh] md:h-[25vh] flex items-center justify-center overflow-hidden">
@@ -23,21 +33,43 @@ const Contact = () => {
             alt="Interior de Donde Carla"
             className="absolute inset-0 w-full h-full object-cover brightness-50 contrast-125"
           />
-          <div className="container mx-auto px-4 z-20 text-center text-white-1">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+          <div
+            ref={bannerRef}
+            className="container mx-auto px-4 z-20 text-center text-white-1"
+          >
+            <h1
+              className={`text-4xl md:text-5xl lg:text-6xl font-bold mb-4 ${
+                bannerVisible
+                  ? "animate__animated animate__fadeInDown"
+                  : "opacity-0"
+              }`}
+            >
               <span className="font-playfair">Contáctanos</span>
             </h1>
-            <p className="text-xl md:text-2xl max-w-2xl mx-auto">
+            <p
+              className={`text-xl md:text-2xl max-w-2xl mx-auto ${
+                bannerVisible ? "animate__animated animate__fadeInUp" : "opacity-0"
+              }`}
+            >
               Estamos listos para atenderte
             </p>
           </div>
         </div>
       </section>
 
+      {/* Información y Formulario */}
       <section className="py-16 bg-background-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <div>
+            {/* Información */}
+            <div
+              ref={infoRef}
+              className={`${
+                infoVisible
+                  ? "animate__animated animate__fadeInLeft"
+                  : "opacity-0"
+              }`}
+            >
               <h2 className="text-2xl font-bold text-primary mb-6">
                 Información de Contacto
               </h2>
@@ -71,8 +103,8 @@ const Contact = () => {
                   <MessageCircleIcon className="w-6 h-6 text-secondary-1 mr-3 flex-shrink-0 mt-0.5" />
                   <div>
                     <h3 className="font-semibold text-primary">WhatsApp</h3>
-                    <p className="text-white-2">+506 1234-5678</p>
-                    <WhatsAppButton className="inline-block mt-2 bg-ternary-1 hover:bg-ternary-3 active:bg-ternary-2 text-white-1 font-medium py-2 px-4 rounded-md transition-colors"></WhatsAppButton>
+                    <p className="text-white-2">+506 8509-8985</p>
+                    <WhatsAppButton className="inline-block mt-2 bg-ternary-1 hover:bg-ternary-3 active:bg-ternary-2 text-white-1 font-medium py-2 px-4 rounded-md transition-colors" />
                   </div>
                 </div>
                 <div className="flex items-start">
@@ -104,7 +136,15 @@ const Contact = () => {
               </div>
             </div>
 
-            <div>
+            {/* Formulario */}
+            <div
+              ref={formRef}
+              className={`${
+                formVisible
+                  ? "animate__animated animate__fadeInRight"
+                  : "opacity-0"
+              }`}
+            >
               <h2 className="text-2xl font-bold text-primary mb-6">
                 Envíanos un Mensaje
               </h2>
