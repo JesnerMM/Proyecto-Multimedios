@@ -2,13 +2,13 @@ import React, { useState, useRef } from "react";
 import { SearchIcon, ChevronRightIcon, ChevronLeftIcon } from "lucide-react";
 
 const Menu = () => {
-  const [activeCategory, setActiveCategory] = useState("casados");
+  const [activeCategory, setActiveCategory] = useState("all");
   const [searchTerm, setSearchTerm] = useState("");
   const categoriesContainerRef = useRef(null);
 
   const scrollCategories = (direction) => {
     if (categoriesContainerRef.current) {
-      const scrollAmount = 200; // Ajusta la cantidad de scroll
+      const scrollAmount = 200;
       if (direction === "left") {
         categoriesContainerRef.current.scrollBy({
           left: -scrollAmount,
@@ -40,8 +40,6 @@ const Menu = () => {
         </h1>
 
         <div className="mb-8">
-          {/* Search input */}
-          {/* Añadimos mb-4 o un espaciado similar para separar el input de las categorías */}
           <div className="relative mx-auto w-full max-w-lg mb-4">
             <input
               type="text"
@@ -53,9 +51,8 @@ const Menu = () => {
             <SearchIcon className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400" />
           </div>
 
-          <div className="bg-white p-4 rounded-lg shadow-md">
+          <div className="bg-white-1 p-4 rounded-lg shadow-md">
             <div className="flex flex-col gap-4">
-              {/* Categories scroll */}
               <div className="relative flex items-center">
                 <button
                   onClick={() => scrollCategories("left")}
@@ -68,7 +65,7 @@ const Menu = () => {
                   className="flex flex-row overflow-x-auto pb-2 px-8 custom-scrollbar"
                   style={{
                     scrollbarWidth: "none",
-                    MsOverflowStyle: "none", // Para IE/Edge
+                    MsOverflowStyle: "none",
                   }}
                 >
                   {categories.map((category) => (
@@ -85,12 +82,12 @@ const Menu = () => {
                         className={`w-16 h-16 rounded-full flex items-center justify-center p-1.5 ${
                           activeCategory === category.id
                             ? "bg-[#8B6F47]"
-                            : "bg-gray-200"
+                            : ""
                         }`}
                       >
                         <img
                           src={category.image}
-                          alt={category.name}
+                          alt={category.alt}
                           className="w-full h-full object-contain rounded-full"
                         />
                       </div>
@@ -126,7 +123,7 @@ const Menu = () => {
               >
                 <img
                   src={item.image}
-                  alt={item.name}
+                  alt={item.alt}
                   className="w-full h-48 object-cover"
                 />
                 <div className="p-4">
@@ -181,196 +178,557 @@ const getCategoryName = (categoryId) => {
   return category ? category.name : "";
 };
 
+// Datos del menú en formato JSON
 const categories = [
   {
-    id: "casados",
-    name: "Casados",
-    image: "/src/assets/casado.png",
+    id: "entradas",
+    name: "Entradas",
+    image: "src/assets/icons/categories/icono-entradas.png",
+    alt: "Icono de entradas y aperitivos"
   },
   {
-    id: "pollo-y-lomo",
-    name: "Pollo y Lomo",
-    image: "/src/assets/pollo-y-lomo.png",
+    id: "sandwiches",
+    name: "Sándwiches",
+    image: "src/assets/icons/categories/icono-sandwiches.png",
+    alt: "Icono de sándwiches"
   },
   {
-    id: "camarones-y-pescado",
-    name: "Camarones y Pescado",
-    image: "/src/assets/camarones-y-pescado.png",
-  },
-  {
-    id: "tortilla-de-harina",
-    name: "Tortilla de harina",
-    image: "/src/assets/tortilla-de-harina.png",
-  },
-  {
-    id: "pescado",
-    name: "Pescado",
-    image: "/src/assets/pescado.png",
-  },
-  {
-    id: "tortilla-de-maiz",
-    name: "Tortilla de maíz",
-    image: "/src/assets/tortilla-de-maiz.png",
+    id: "empanadas",
+    name: "Empanadas",
+    image: "src/assets/icons/categories/icono-empanadas.png",
+    alt: "Icono de empanadas"
   },
   {
     id: "hamburguesas",
     name: "Hamburguesas",
-    image: "/src/assets/hamburguesa.png",
+    image: "src/assets/icons/categories/icono-hamburguesas.png",
+    alt: "Icono de hamburguesas"
   },
   {
     id: "papas-fritas",
     name: "Papas fritas",
-    image: "/src/assets/papas-fritas.png",
+    image: "src/assets/icons/categories/icono-papas-fritas.png",
+    alt: "Icono de papas fritas"
   },
   {
-    id: "entradas",
-    name: "Entradas",
-    image: "/src/assets/entradas.png",
+    id: "otros-platos",
+    name: "Otros Platos",
+    image: "src/assets/icons/categories/icono-otros-platos.png",
+    alt: "Icono de otros platos"
   },
-  { id: "all", name: "Todos", image: "/src/assets/todos.png" },
+  {
+    id: "tortilla-harina",
+    name: "Tortilla de Harina",
+    image: "src/assets/icons/categories/icono-tortilla-de-harina.png",
+    alt: "Icono de tortillas de harina"
+  },
+  {
+    id: "pescado",
+    name: "Pescado",
+    image: "src/assets/icons/categories/icono-pescado.png",
+    alt: "Icono de pollo y pescado"
+  },
+  {
+    id: "tortilla-maiz",
+    name: "Tortilla de Maíz",
+    image: "src/assets/icons/categories/icono-tortilla-de-maiz.png",
+    alt: "Icono de tortillas de maíz"
+  },
+  {
+    id: "casados",
+    name: "Casados",
+    image: "src/assets/icons/categories/icono-casados.png",
+    alt: "Icono de platos casados"
+  },
+  {
+    id: "pollo-lomo",
+    name: "Pollo y Lomo",
+    image: "src/assets/icons/categories/icono-pollo-y-lomo.png",
+    alt: "Icono de pollo y lomo"
+  },
+  {
+    id: "camarones-pescado",
+    name: "Camarones y Pescado",
+    image: "src/assets/icons/categories/icono-camarones-y-pescado.png",
+    alt: "Icono de camarones y pescado"
+  },
+  {
+    id: "all",
+    name: "Todos",
+    image: "src/assets/icons/categories/icono-todos-los-platillos.png",
+    alt: "Icono de todos los platillos"
+  }
 ];
 
 const menuItems = [
   {
-    name: "Casado Tradicional",
-    price: "4500",
-    description:
-      "Arroz, frijoles, ensalada, plátano maduro y su elección de proteína.",
-    category: "casados",
-    image:
-      "https://images.unsplash.com/photo-1599789197514-47270cd526b4?q=80&w=2070&auto=format&fit=crop",
-    isSpecial: true,
-  },
-  {
-    name: "Arroz con Pollo",
-    price: "3800",
-    description: "Arroz salteado con pollo, vegetales y especias caseras.",
-    category: "pollo-y-lomo",
-    image:
-      "https://images.unsplash.com/photo-1594221708779-94832f4320d1?q=80&w=2070&auto=format&fit=crop",
-    isSpecial: false,
-  },
-  {
-    name: "Sopa de Pollo",
-    price: "3200",
-    description: "Caldo de pollo casero con vegetales y fideos.",
-    category: "pollo-y-lomo",
-    image:
-      "https://images.unsplash.com/photo-1547592166-23ac45744acd?q=80&w=2071&auto=format&fit=crop",
-    isSpecial: false,
-  },
-  {
-    name: "Gallo Pinto",
-    price: "2800",
-    description: "Tradicional mezcla de arroz y frijoles con especias.",
-    category: "casados",
-    image:
-      "https://images.unsplash.com/photo-1551889579-7d2c37b2c9e7?q=80&w=2070&auto=format&fit=crop",
-    isSpecial: false,
-  },
-  {
-    name: "Patacones",
-    price: "2200",
-    description:
-      "Plátanos verdes fritos y prensados, servidos con frijoles molidos.",
-    category: "entradas",
-    image:
-      "https://images.unsplash.com/photo-1626198226928-ca8c9af16999?q=80&w=2070&auto=format&fit=crop",
-    isSpecial: false,
-  },
-  {
-    name: "Ensalada Fresca",
-    price: "1800",
-    description: "Mezcla de lechugas, tomate, pepino y aderezo de la casa.",
-    category: "entradas",
-    image:
-      "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=2070&auto=format&fit=crop",
-    isSpecial: false,
-  },
-  {
-    name: "Batido de Frutas",
-    price: "2200",
-    description: "Batido natural con las frutas más frescas de la temporada.",
-    category: "bebidas", // Nueva categoría
-    image:
-      "https://images.unsplash.com/photo-1623065422902-30a2d299bbe4?q=80&w=2071&auto=format&fit=crop",
-    isSpecial: false,
-  },
-  {
-    name: "Café Chorreado",
-    price: "1500",
-    description: "Café tradicional costarricense preparado al momento.",
-    category: "bebidas", // Nueva categoría
-    image:
-      "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=2070&auto=format&fit=crop",
-    isSpecial: true,
-  },
-  {
-    name: "Tres Leches",
-    price: "2500",
-    description: "Esponjoso bizcocho bañado en tres tipos de leche.",
-    category: "postres", // Nueva categoría
-    image:
-      "https://images.unsplash.com/photo-1602663491496-37963b3c2b75?q=80&w=2070&auto=format&fit=crop",
-    isSpecial: true,
-  },
-  {
-    name: "Hamburguesa Clásica",
-    price: "4000",
-    description: "Carne, lechuga, tomate, cebolla, queso y salsa especial.",
-    category: "hamburguesas",
-    image:
-      "https://images.unsplash.com/photo-1568901220263-d3a90623a9d9?q=80&w=2070&auto=format&fit=crop",
-    isSpecial: false,
-  },
-  {
-    name: "Papas Fritas Grandes",
-    price: "1500",
-    description: "Porción grande de papas fritas crujientes.",
-    category: "papas-fritas",
-    image:
-      "https://images.unsplash.com/photo-1630404495572-c2e36d4f40f3?q=80&w=2070&auto=format&fit=crop",
-    isSpecial: false,
-  },
-  {
-    name: "Tacos de Maíz",
+    name: "Patacones con frijoles y guacamole",
     price: "3000",
-    description:
-      "Dos tacos de tortilla de maíz con carne, repollo y pico de gallo.",
-    category: "tortilla-de-maiz",
-    image:
-      "https://images.unsplash.com/photo-1562967912-3269d724036f?q=80&w=2070&auto=format&fit=crop",
-    isSpecial: false,
+    description: "Patacones crujientes acompañados de frijoles molidos y guacamole fresco.",
+    category: "entradas",
+    image: "https://images.unsplash.com/photo-1626198226928-ca8c9af16999?q=80&w=2070&auto=format&fit=crop",
+    alt: "Patacones con frijoles y guacamole",
+    isSpecial: false
   },
   {
-    name: "Burrito de Pollo",
-    price: "4200",
-    description:
-      "Tortilla de harina rellena de pollo, arroz, frijoles y queso.",
-    category: "tortilla-de-harina",
-    image:
-      "https://images.unsplash.com/photo-1524385392686-e7e003185360?q=80&w=2070&auto=format&fit=crop",
-    isSpecial: false,
+    name: "Orden de papas",
+    price: "2000",
+    description: "Papas fritas crujientes en porción individual.",
+    category: "entradas",
+    image: "https://images.unsplash.com/photo-1630404495572-c2e36d4f40f3?q=80&w=2070&auto=format&fit=crop",
+    alt: "Orden de papas fritas",
+    isSpecial: false
   },
   {
-    name: "Pescado Entero Frito",
-    price: "6000",
-    description:
-      "Pescado entero fresco, frito a la perfección, servido con ensalada.",
+    name: "Chips con guacamole y frijoles molidos",
+    price: "2000",
+    description: "Tortillas chips acompañadas de guacamole y frijoles molidos.",
+    category: "entradas",
+    image: "https://images.unsplash.com/photo-1571805618149-3a772570ebcd?q=80&w=2070&auto=format&fit=crop",
+    alt: "Chips con guacamole y frijoles",
+    isSpecial: false
+  },
+  {
+    name: "Doraditas",
+    price: "1500",
+    description: "Deliciosas doraditas crocantes.",
+    category: "entradas",
+    image: "https://images.unsplash.com/photo-1599481238640-4c1288750d7a?q=80&w=2070&auto=format&fit=crop",
+    alt: "Doraditas crocantes",
+    isSpecial: false
+  },
+  {
+    name: "Sándwich de jamón y queso",
+    price: "2500",
+    description: "Clásico sándwich de jamón y queso con pan fresco.",
+    category: "sandwiches",
+    image: "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?q=80&w=2070&auto=format&fit=crop",
+    alt: "Sándwich de jamón y queso",
+    isSpecial: false
+  },
+  {
+    name: "Sándwich de carne mechada",
+    price: "2500",
+    description: "Sándwich relleno de jugosa carne mechada.",
+    category: "sandwiches",
+    image: "https://images.unsplash.com/photo-1559843445-53f32bbfe8e7?q=80&w=2070&auto=format&fit=crop",
+    alt: "Sándwich de carne mechada",
+    isSpecial: false
+  },
+  {
+    name: "Sándwich de pollo",
+    price: "2500",
+    description: "Sándwich con tierno pollo y vegetales frescos.",
+    category: "sandwiches",
+    image: "https://images.unsplash.com/photo-1606755456206-b25206bfa233?q=80&w=2070&auto=format&fit=crop",
+    alt: "Sándwich de pollo",
+    isSpecial: false
+  },
+  {
+    name: "Empanada de queso",
+    price: "1000",
+    description: "Empanada rellena de queso derretido.",
+    category: "empanadas",
+    image: "https://images.unsplash.com/photo-1626804475297-41608ea09aeb?q=80&w=2070&auto=format&fit=crop",
+    alt: "Empanada de queso",
+    isSpecial: false
+  },
+  {
+    name: "Empanada de frijol con queso",
+    price: "1200",
+    description: "Empanada rellena de frijoles molidos y queso.",
+    category: "empanadas",
+    image: "https://images.unsplash.com/photo-1626804475297-41608ea09aeb?q=80&w=2070&auto=format&fit=crop",
+    alt: "Empanada de frijol con queso",
+    isSpecial: false
+  },
+  {
+    name: "Empanada de carne mechada",
+    price: "1400",
+    description: "Empanada rellena de sabrosa carne mechada.",
+    category: "empanadas",
+    image: "https://images.unsplash.com/photo-1626804475297-41608ea09aeb?q=80&w=2070&auto=format&fit=crop",
+    alt: "Empanada de carne mechada",
+    isSpecial: false
+  },
+  {
+    name: "Hamburguesa de la casa",
+    price: "3000",
+    description: "Pan brioche, filete de pollo empanizado, coleslaw, queso americano, lechuga, salsa chipotle acompañada de papas fritas.",
+    category: "hamburguesas",
+    image: "https://images.unsplash.com/photo-1568901220263-d3a90623a9d9?q=80&w=2070&auto=format&fit=crop",
+    alt: "Hamburguesa de la casa",
+    isSpecial: true
+  },
+  {
+    name: "Hamburguesa Angus",
+    price: "4500",
+    description: "Pan brioche, Torta angus 160g, mayonesa de la casa, guacamole, lechuga, tomate, cebolla, tocineta acompañada de papas fritas.",
+    category: "hamburguesas",
+    image: "https://images.unsplash.com/photo-1565299507177-b0ac66763828?q=80&w=2070&auto=format&fit=crop",
+    alt: "Hamburguesa Angus",
+    isSpecial: true
+  },
+  {
+    name: "Hamburguesa especial pequeña",
+    price: "1500",
+    description: "Pan, lechuga, tomate, jamón queso torta y salsas acompañada de papas fritas.",
+    category: "hamburguesas",
+    image: "https://images.unsplash.com/photo-1582196016295-f8c10f6d0716?q=80&w=2070&auto=format&fit=crop",
+    alt: "Hamburguesa especial pequeña",
+    isSpecial: false
+  },
+  {
+    name: "Papas de la casa",
+    price: "3000",
+    description: "Frijoles, pico de gallo, guacamole, carne mechada, salsa de queso, mayonesa de la casa y natilla.",
+    category: "papas-fritas",
+    image: "https://images.unsplash.com/photo-1630404495572-c2e36d4f40f3?q=80&w=2070&auto=format&fit=crop",
+    alt: "Papas de la casa",
+    isSpecial: true
+  },
+  {
+    name: "Papas Donde Carla",
+    price: "4000",
+    description: "Salsa de queso, natilla, pico de gallo y guacamole con 10 camarones empanizados.",
+    category: "papas-fritas",
+    image: "https://images.unsplash.com/photo-1630404495572-c2e36d4f40f3?q=80&w=2070&auto=format&fit=crop",
+    alt: "Papas Donde Carla con camarones",
+    isSpecial: true
+  },
+  {
+    name: "Bacon fries",
+    price: "3500",
+    description: "Salsa de queso, natilla y tocineta.",
+    category: "papas-fritas",
+    image: "https://images.unsplash.com/photo-1630404495572-c2e36d4f40f3?q=80&w=2070&auto=format&fit=crop",
+    alt: "Papas con bacon",
+    isSpecial: false
+  },
+  {
+    name: "Orden de papas pequeña",
+    price: "2500",
+    description: "Porción pequeña de papas fritas.",
+    category: "papas-fritas",
+    image: "https://images.unsplash.com/photo-1630404495572-c2e36d4f40f3?q=80&w=2070&auto=format&fit=crop",
+    alt: "Orden pequeña de papas fritas",
+    isSpecial: false
+  },
+  {
+    name: "Orden de papas grande",
+    price: "1500",
+    description: "Porción grande de papas fritas.",
+    category: "papas-fritas",
+    image: "https://images.unsplash.com/photo-1630404495572-c2e36d4f40f3?q=80&w=2070&auto=format&fit=crop",
+    alt: "Orden grande de papas fritas",
+    isSpecial: false
+  },
+  {
+    name: "Salchipapas",
+    price: "4500",
+    description: "Papas fritas con salchichas y salsas.",
+    category: "papas-fritas",
+    image: "https://images.unsplash.com/photo-1630404495572-c2e36d4f40f3?q=80&w=2070&auto=format&fit=crop",
+    alt: "Salchipapas",
+    isSpecial: false
+  },
+  {
+    name: "Plato de chicharrones",
+    price: "3000",
+    description: "Acompañado de 5 patacones, frijoles molidos y ensalada.",
+    category: "otros-platos",
+    image: "https://images.unsplash.com/photo-1625943555419-56a2cb596640?q=80&w=2070&auto=format&fit=crop",
+    alt: "Plato de chicharrones",
+    isSpecial: false
+  },
+  {
+    name: "Canastas de patacón",
+    price: "3000",
+    description: "Frijoles molidos, carne mechada, pico de gallo y guacamole.",
+    category: "otros-platos",
+    image: "https://images.unsplash.com/photo-1625943555419-56a2cb596640?q=80&w=2070&auto=format&fit=crop",
+    alt: "Canastas de patacón",
+    isSpecial: false
+  },
+  {
+    name: "Burrito de carne",
+    price: "3000",
+    description: "Frijoles, guacamole, tomate, lechuga, carne mechada, salsa de queso y mayonesa de la casa acompañado de papas fritas.",
+    category: "tortilla-harina",
+    image: "https://images.unsplash.com/photo-1524385392686-e7e003185360?q=80&w=2070&auto=format&fit=crop",
+    alt: "Burrito de carne",
+    isSpecial: false
+  },
+  {
+    name: "Burrito de pollo",
+    price: "3000",
+    description: "Lechuga, tomate, salsa de queso y mayonesa de la casa acompañado de papas fritas.",
+    category: "tortilla-harina",
+    image: "https://images.unsplash.com/photo-1524385392686-e7e003185360?q=80&w=2070&auto=format&fit=crop",
+    alt: "Burrito de pollo",
+    isSpecial: false
+  },
+  {
+    name: "Burrito de camarones empanizados",
+    price: "3000",
+    description: "Lechuga, tomate, salsa de queso y mayonesa de la casa acompañado de papas fritas.",
+    category: "tortilla-harina",
+    image: "https://images.unsplash.com/photo-1524385392686-e7e003185360?q=80&w=2070&auto=format&fit=crop",
+    alt: "Burrito de camarones",
+    isSpecial: false
+  },
+  {
+    name: "Quesadilla de carne",
+    price: "3000",
+    description: "Frijoles molidos, queso mozzarella y carne mechada, acompañado de papas fritas.",
+    category: "tortilla-harina",
+    image: "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?q=80&w=2070&auto=format&fit=crop",
+    alt: "Quesadilla de carne",
+    isSpecial: false
+  },
+  {
+    name: "Flauta de carne",
+    price: "3000",
+    description: "Tortilla de harina frita rellena de jamón, queso amarillo y carne mechada acompañado de ensalada y papas fritas.",
+    category: "tortilla-harina",
+    image: "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?q=80&w=2070&auto=format&fit=crop",
+    alt: "Flauta de carne",
+    isSpecial: false
+  },
+  {
+    name: "Triangulitos de carne",
+    price: "3000",
+    description: "Triangulitos fritos rellenos de carne mechada, acompañado de ensalada y papas fritas.",
+    category: "tortilla-harina",
+    image: "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?q=80&w=2070&auto=format&fit=crop",
+    alt: "Triangulitos de carne",
+    isSpecial: false
+  },
+  {
+    name: "Deditos de pescado",
+    price: "3000",
+    description: "Acompañado de salsa tártara y papas fritas.",
     category: "pescado",
-    image:
-      "https://images.unsplash.com/photo-1593540026229-37f2c61e4b9c?q=80&w=2070&auto=format&fit=crop",
-    isSpecial: true,
+    image: "https://images.unsplash.com/photo-1599481238640-4c1288750d7a?q=80&w=2070&auto=format&fit=crop",
+    alt: "Deditos de pescado",
+    isSpecial: false
   },
   {
-    name: "Camarones al Ajillo",
-    price: "5500",
-    description: "Tiernos camarones salteados en salsa de ajo y mantequilla.",
-    category: "camarones-y-pescado",
-    image:
-      "https://images.unsplash.com/photo-1582236371757-b00350d7e6d0?q=80&w=2070&auto=format&fit=crop",
-    isSpecial: false,
+    name: "Deditos de pollo",
+    price: "3000",
+    description: "Acompañado de mostaza miel y papas fritas.",
+    category: "pollo-lomo",
+    image: "https://images.unsplash.com/photo-1599481238640-4c1288750d7a?q=80&w=2070&auto=format&fit=crop",
+    alt: "Deditos de pollo",
+    isSpecial: false
   },
+  {
+    name: "Pescado empanizado",
+    price: "3000",
+    description: "Acompañado de ensalada, salsa tártara y papas fritas.",
+    category: "pescado",
+    image: "https://images.unsplash.com/photo-1599481238640-4c1288750d7a?q=80&w=2070&auto=format&fit=crop",
+    alt: "Pescado empanizado",
+    isSpecial: false
+  },
+  {
+    name: "Chuleta de pescado",
+    price: "3000",
+    description: "Acompañado de ensalada y papas fritas.",
+    category: "pescado",
+    image: "https://images.unsplash.com/photo-1599481238640-4c1288750d7a?q=80&w=2070&auto=format&fit=crop",
+    alt: "Chuleta de pescado",
+    isSpecial: false
+  },
+  {
+    name: "Taco sencillo",
+    price: "3000",
+    description: "Acompañado de repollo, pico de gallo y papas fritas.",
+    category: "tortilla-maiz",
+    image: "https://images.unsplash.com/photo-1562967912-3269d724036f?q=80&w=2070&auto=format&fit=crop",
+    alt: "Taco sencillo",
+    isSpecial: false
+  },
+  {
+    name: "Taco doble especial",
+    price: "3000",
+    description: "Acompañado de repollo, pico de gallo y papas fritas.",
+    category: "tortilla-maiz",
+    image: "https://images.unsplash.com/photo-1562967912-3269d724036f?q=80&w=2070&auto=format&fit=crop",
+    alt: "Taco doble especial",
+    isSpecial: false
+  },
+  {
+    name: "Chalupa",
+    price: "3000",
+    description: "Frijoles molidos, carne mechada, lechuga, chimichurri acompañado de papas fritas.",
+    category: "tortilla-maiz",
+    image: "https://images.unsplash.com/photo-1562967912-3269d724036f?q=80&w=2070&auto=format&fit=crop",
+    alt: "Chalupa",
+    isSpecial: false
+  },
+  {
+    name: "Nachos Donde Carla",
+    price: "3000",
+    description: "Frijoles molidos, carne mechada, pico de gallo, guacamole, salsa de queso, salsa tomate, mayonesa de la casa y natilla.",
+    category: "tortilla-maiz",
+    image: "https://images.unsplash.com/photo-1571805618149-3a772570ebcd?q=80&w=2070&auto=format&fit=crop",
+    alt: "Nachos Donde Carla",
+    isSpecial: true
+  },
+  {
+    name: "Casado de fajitas de pollo",
+    price: "3000",
+    description: "Arroz, frijoles, ensalada, papas fritas y refresco natural.",
+    category: "casados",
+    image: "https://images.unsplash.com/photo-1599789197514-47270cd526b4?q=80&w=2070&auto=format&fit=crop",
+    alt: "Casado de fajitas de pollo",
+    isSpecial: false
+  },
+  {
+    name: "Casado de fajitas de lomo",
+    price: "3500",
+    description: "Arroz, frijoles, ensalada, papas fritas y refresco natural.",
+    category: "casados",
+    image: "https://images.unsplash.com/photo-1599789197514-47270cd526b4?q=80&w=2070&auto=format&fit=crop",
+    alt: "Casado de fajitas de lomo",
+    isSpecial: false
+  },
+  {
+    name: "Casado de fajitas mixtas",
+    price: "3500",
+    description: "Arroz, frijoles, ensalada, papas fritas y refresco natural.",
+    category: "casados",
+    image: "https://images.unsplash.com/photo-1599789197514-47270cd526b4?q=80&w=2070&auto=format&fit=crop",
+    alt: "Casado de fajitas mixtas",
+    isSpecial: false
+  },
+  {
+    name: "Casado de chuleta",
+    price: "3000",
+    description: "Arroz, frijoles, ensalada, papas fritas y refresco natural.",
+    category: "casados",
+    image: "https://images.unsplash.com/photo-1599789197514-47270cd526b4?q=80&w=2070&auto=format&fit=crop",
+    alt: "Casado de chuleta",
+    isSpecial: false
+  },
+  {
+    name: "Casado de chuleta de pescado",
+    price: "3500",
+    description: "Arroz, frijoles, ensalada, papas fritas y refresco natural.",
+    category: "casados",
+    image: "https://images.unsplash.com/photo-1599789197514-47270cd526b4?q=80&w=2070&auto=format&fit=crop",
+    alt: "Casado de chuleta de pescado",
+    isSpecial: false
+  },
+  {
+    name: "Casado de pescado",
+    price: "3000",
+    description: "Arroz, frijoles, ensalada, papas fritas y refresco natural.",
+    category: "casados",
+    image: "https://images.unsplash.com/photo-1599789197514-47270cd526b4?q=80&w=2070&auto=format&fit=crop",
+    alt: "Casado de pescado",
+    isSpecial: false
+  },
+  {
+    name: "Fajitas de pollo",
+    price: "4500",
+    description: "Acompañado de ensalada y papas fritas.",
+    category: "pollo-lomo",
+    image: "https://images.unsplash.com/photo-1594221708779-94832f4320d1?q=80&w=2070&auto=format&fit=crop",
+    alt: "Plato de fajitas de pollo con ensalada y papas fritas",
+    isSpecial: false
+  },
+  {
+    name: "Filete de pollo a la plancha",
+    price: "4500",
+    description: "Acompañado de ensalada y papas fritas. Opciones: Fajitas de pollo, Filete de pollo a la plancha, Filete de pollo empanizado, Fajitas de lomo, Fajitas mixtas.",
+    category: "pollo-lomo",
+    image: "https://images.unsplash.com/photo-1594221708779-94832f4320d1?q=80&w=2070&auto=format&fit=crop",
+    alt: "Plato de filete de pollo a la plancha con ensalada y papas fritas",
+    isSpecial: false
+  },
+  {
+    name: "Filete de pollo empanizado",
+    price: "4500",
+    description: "Acompañado de ensalada y papas fritas. Opciones: Fajitas de pollo, Filete de pollo a la plancha, Filete de pollo empanizado, Fajitas de lomo, Fajitas mixtas.",
+    category: "pollo-lomo",
+    image: "https://images.unsplash.com/photo-1594221708779-94832f4320d1?q=80&w=2070&auto=format&fit=crop",
+    alt: "Plato de filete de pollo empanizado con ensalada y papas fritas",
+    isSpecial: false
+  },
+  {
+    name: "Fajitos de lomo",
+    price: "4500",
+    description: "Acompañado de ensalada y papas fritas. Opciones: Fajitas de pollo, Filete de pollo a la plancha, Filete de pollo empanizado, Fajitas de lomo, Fajitas mixtas.",
+    category: "pollo-lomo",
+    image: "https://images.unsplash.com/photo-1594221708779-94832f4320d1?q=80&w=2070&auto=format&fit=crop",
+    alt: "Plato de fajitos de lomo con ensalada y papas fritas",
+    isSpecial: false
+  },
+  {
+    name: "Fajitas mixtas",
+    price: "5000",
+    description: "Acompañado de ensalada y papas fritas.",
+    category: "pollo-lomo",
+    image: "https://images.unsplash.com/photo-1594221708779-94832f4320d1?q=80&w=2070&auto=format&fit=crop",
+    alt: "Fajitas mixtas",
+    isSpecial: true
+  },
+  {
+    name: "Pescado a la milanesa",
+    price: "4500",
+    description: "Acompañado de ensalada y papas fritas.",
+    category: "camarones-pescado",
+    image: "https://images.unsplash.com/photo-1582236371757-b00350d7e6d0?q=80&w=2070&auto=format&fit=crop",
+    alt: "Plato de pescado a la milanesa con ensalada y papas fritas",
+    isSpecial: false
+  },
+  {
+    name: "Pescado a la plancha",
+    price: "4500",
+    description: "Acompañado de ensalada y papas fritas.",
+    category: "camarones-pescado",
+    image: "https://images.unsplash.com/photo-1582236371757-b00350d7e6d0?q=80&w=2070&auto=format&fit=crop",
+    alt: "Plato de pescado a la plancha con ensalada y papas fritas",
+    isSpecial: false
+  },
+  {
+    name: "Camarones empanizados",
+    price: "4500",
+    description: "Acompañado de ensalada y papas fritas.",
+    category: "camarones-pescado",
+    image: "https://images.unsplash.com/photo-1582236371757-b00350d7e6d0?q=80&w=2070&auto=format&fit=crop",
+    alt: "Plato de camarones empanizados con ensalada y papas fritas",
+    isSpecial: false
+  },
+  {
+    name: "Camarones al ajillo",
+    price: "4500",
+    description: "Acompañado de ensalada y papas fritas.",
+    category: "camarones-pescado",
+    image: "https://images.unsplash.com/photo-1582236371757-b00350d7e6d0?q=80&w=2070&auto=format&fit=crop",
+    alt: "Plato de camarones al ajillo con ensalada y papas fritas",
+    isSpecial: false
+  },
+  {
+    name: "Arroz con camarones",
+    price: "4500",
+    description: "Acompañado de ensalada y papas fritas.",
+    category: "camarones-pescado",
+    image: "https://images.unsplash.com/photo-1582236371757-b00350d7e6d0?q=80&w=2070&auto=format&fit=crop",
+    alt: "Plato de arroz con camarones con ensalada y papas fritas",
+    isSpecial: false
+  },
+  {
+    name: "Pargo rojo entero",
+    price: "5500",
+    description: "Pargo rojo entero fresco, acompañado de ensalada y papas fritas.",
+    category: "camarones-pescado",
+    image: "https://images.unsplash.com/photo-1593540026229-37f2c61e4b9c?q=80&w=2070&auto=format&fit=crop",
+    alt: "Pargo rojo entero",
+    isSpecial: true
+  }
 ];
 
 export default Menu;
