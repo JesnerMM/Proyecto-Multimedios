@@ -1,4 +1,5 @@
 import React, { useState, useRef } from "react";
+import Data from "../json/menu.json";
 import { SearchIcon, ChevronRightIcon, ChevronLeftIcon } from "lucide-react";
 
 interface MenuProps {
