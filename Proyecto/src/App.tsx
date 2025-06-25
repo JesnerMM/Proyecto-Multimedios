@@ -41,7 +41,7 @@ export function App() {
         <main className="flex-grow mt-16">
           <Routes>
             <Route path="/" element={<Home useElementOnScreen={useElementOnScreen}/>}/>
-            <Route path="/menu" element={<Menu />} />
+            <Route path="/menu" element={<Menu useElementOnScreen={useElementOnScreen} />} />
             <Route path="/about" element={<About useElementOnScreen={useElementOnScreen} />} />
             <Route path="/contact" element={<Contact useElementOnScreen={useElementOnScreen} />} />
           </Routes>
