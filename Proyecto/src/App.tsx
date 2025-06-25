@@ -43,10 +43,10 @@ export function App() {
             <Route path="/" element={<Home />}/>
             <Route path="/menu" element={<Menu />} />
             <Route path="/about" element={<About useElementOnScreen={useElementOnScreen}/>} />
-            <Route path="/contact" element={<Contact />} />
+            <Route path="/contact" element={<Contact useElementOnScreen={useElementOnScreen}/>} />
           </Routes>
         </main>
-        <Footer />
+        <Footer useElementOnScreen={useElementOnScreen} />
       </div>
     </Router>;
 }

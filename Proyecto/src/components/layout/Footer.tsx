@@ -3,15 +3,19 @@ import { Link } from "react-router-dom";
 import Order from "./Order";
 import { MapPinIcon, ClockIcon, InstagramIcon, PhoneIcon } from "lucide-react";
 
-const Footer = () => {
+interface FooterProps {
+  useElementOnScreen: (options: any) => [React.RefObject<any>, boolean];
+}
+
+const Footer: React.FC<FooterProps> = ({ useElementOnScreen }) => {
   return (
     <footer className="bg-primary text-white-1">
-      <Order></Order>
+      <Order useElementOnScreen={useElementOnScreen} />
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <h3 className="text-xl font-semibold mb-4">Donde Carla</h3>
-            <p className="text-sm  mb-4">
+            <p className="text-sm mb-4">
               Comida casera, de alta calidad y con un servicio rápido y
               personalizado en Juan Viñas, Costa Rica.
             </p>
@@ -101,4 +105,5 @@ const Footer = () => {
     </footer>
   );
 };
+
 export default Footer;
