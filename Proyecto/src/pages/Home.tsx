@@ -39,7 +39,7 @@ const Home: React.FC<HomeProps> = ({ useElementOnScreen }) => {
         <div className="relative h-[50vh] md:h-[46vh] flex items-center justify-center overflow-hidden">
           <img
             src="assets/banner.jpeg"
-            alt="Interior de Donde Carla"
+            alt="Interior de Donde Carla prueba"
             className="absolute object-cover inset-0 w-full h-full brightness-50 contrast-125"
           />
           <div ref={bannerButtonsRef} className="container mx-auto px-4 z-20 text-center">
