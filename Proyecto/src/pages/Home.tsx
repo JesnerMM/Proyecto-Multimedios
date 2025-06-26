@@ -38,8 +38,8 @@ const Home: React.FC<HomeProps> = ({ useElementOnScreen }) => {
         <div className="absolute inset-0 bg-black opacity-30 z-10"></div>
         <div className="relative h-[50vh] md:h-[46vh] flex items-center justify-center overflow-hidden">
           <img
-            src="assets/banner.jpeg"
-            alt="Interior de Donde Carla prueba"
+            src="src/assets/banner.jpeg"
+            alt="Interior de Donde Carla"
             className="absolute object-cover inset-0 w-full h-full brightness-50 contrast-125"
           />
           <div ref={bannerButtonsRef} className="container mx-auto px-4 z-20 text-center">
@@ -56,11 +56,11 @@ const Home: React.FC<HomeProps> = ({ useElementOnScreen }) => {
             >
               <Link
                 to="/menu"
-                className="font-opensans justify-self-center md:flex md:items-center md:justify-center bg-secondary-1 hover:bg-secondary-3 active:bg-secondary-2 text-white-1 font-medium text-sm py-2.5 px-4 rounded-md w-[20em] sm:w-[50vw] md:w-48 text-center"
+                className="font-opensans justify-self-center md:flex md:items-center md:justify-center bg-secondary-1 hover:bg-secondary-3 active:bg-secondary-2 text-white-1 font-medium text-sm py-2.5 px-4 rounded-md w-80 md:w-48 text-center"
               >
                 Ver Menú
               </Link>
-              <WhatsAppButton className="font-opensans justify-self-center w-[20em] sm:w-[50vw] md:w-48 text-sm py-2.5 px-4" />
+              <WhatsAppButton className="font-opensans justify-self-center w-80 md:w-48 text-sm py-2.5 px-4" />
             </div>
           </div>
         </div>
