@@ -47,7 +47,7 @@ const Home: React.FC<HomeProps> = ({ useElementOnScreen }) => {
               <span className="font-playfair text-white-1">Donde </span>
               <span className="font-dancing text-golden-1">Carla</span>
             </h1>
-            <p className={`text-white-1 text-xl md:text-2xl m-8 max-w-2xl mx-auto ${bannerButtonsVisible ? "animate__animated animate__fadeInUp" : "opacity-0"}`}>
+            <p className={`text-white-1 font-opensans text-xl md:text-2xl m-8 max-w-2xl mx-auto ${bannerButtonsVisible ? "animate__animated animate__fadeInUp" : "opacity-0"}`}>
               Disfruta de la mejor comida y siéntete como en casa.
             </p>
             <div
@@ -56,11 +56,11 @@ const Home: React.FC<HomeProps> = ({ useElementOnScreen }) => {
             >
               <Link
                 to="/menu"
-                className="justify-self-center md:flex md:items-center md:justify-center bg-secondary-1 hover:bg-secondary-3 active:bg-secondary-2 text-white-1 font-medium text-sm py-2.5 px-4 rounded-md w-80 md:w-48 text-center"
+                className="font-opensans justify-self-center md:flex md:items-center md:justify-center bg-secondary-1 hover:bg-secondary-3 active:bg-secondary-2 text-white-1 font-medium text-sm py-2.5 px-4 rounded-md w-80 md:w-48 text-center"
               >
                 Ver Menú
               </Link>
-              <WhatsAppButton className="justify-self-center w-80 md:w-48 bg-ternary-1 hover:bg-ternary-3 active:bg-ternary-2 text-white-1 text-sm py-2.5 px-4" />
+              <WhatsAppButton className="font-opensans justify-self-center w-80 md:w-48 text-sm py-2.5 px-4" />
             </div>
           </div>
         </div>
@@ -78,16 +78,16 @@ const Home: React.FC<HomeProps> = ({ useElementOnScreen }) => {
                   : "opacity-0"
               }`}
             >
-              <h2 className="text-3xl font-bold text-primary mb-4">
+              <h2 className="font-lato text-3xl font-bold text-primary mb-4">
                 Bienvenidos a Donde Carla
               </h2>
-              <p className="text-white-2 mb-6">
+              <p className="font-opensans text-white-2 mb-6">
                 Desde hace 2 años, Donde Carla ha sido el destino favorito para
                 disfrutar de comida casera de alta calidad en Juan Viñas.
               </p>
               <Link
                 to="/about"
-                className="inline-flex items-center text-secondary-1 font-medium hover:text-secondary-3 active:text-secondary-2 transition-colors"
+                className="font-opensans inline-flex items-center text-secondary-1 font-medium hover:text-secondary-3 active:text-secondary-2 transition-colors"
               >
                 Conoce nuestra historia
                 <ArrowRightIcon size={16} className="ml-2" />
@@ -116,7 +116,7 @@ const Home: React.FC<HomeProps> = ({ useElementOnScreen }) => {
         <div className="container mx-auto px-4">
           <h2
             ref={featuredTitleRef}
-            className={`text-3xl font-bold text-center text-primary mb-12 ${
+            className={`font-lato text-3xl font-bold text-center text-primary mb-12 ${
               featuredTitleVisible ? "animate__animated animate__fadeInDown" : "opacity-0"
             }`}
           >
@@ -137,15 +137,15 @@ const Home: React.FC<HomeProps> = ({ useElementOnScreen }) => {
                 <img src={item.image} alt={item.alt} className="w-full h-48 object-cover" />
                 <div className="p-4">
                   <div className="flex justify-between items-center mb-2">
-                    <h3 className="text-xl font-semibold text-[#2D1B14]">{item.name}</h3>
-                    <span className="text-[#8B6F47] font-bold">₡{item.price}</span>
+                    <h3 className="font-lato text-xl font-semibold text-[#2D1B14]">{item.name}</h3>
+                    <span className="font-opensans text-[#8B6F47] font-bold">₡{item.price}</span>
                   </div>
                   <p className="text-gray-600 text-sm mb-3">{item.description}</p>
                   <div className="flex justify-between items-center">
-                    <span className="inline-block bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">
+                    <span className="font-opensans inline-block bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">
                       {getCategoryName(item.category)}
                     </span>
-                    <span className="inline-block bg-[#D4AF37] text-white text-xs px-2 py-1 rounded">
+                    <span className="font-opensans inline-block bg-[#D4AF37] text-white text-xs px-2 py-1 rounded">
                       Especial
                     </span>
                   </div>
@@ -162,7 +162,7 @@ const Home: React.FC<HomeProps> = ({ useElementOnScreen }) => {
           >
             <Link
               to="/menu"
-              className="inline-flex items-center bg-ternary-1 hover:bg-ternary-3 active:bg-ternary-2 text-white-1 font-medium py-3 px-6 rounded-md transition-colors"
+              className="font-opensans inline-flex items-center bg-ternary-1 hover:bg-ternary-3 active:bg-ternary-2 text-white-1 font-medium py-3 px-6 rounded-md transition-colors"
             >
               Ver Menú Completo
               <ArrowRightIcon size={16} className="ml-2" />
@@ -181,19 +181,19 @@ const Home: React.FC<HomeProps> = ({ useElementOnScreen }) => {
                 findUsDescVisible ? "animate__animated animate__fadeInLeft" : "opacity-0"
               }`}
             >
-              <h2 className="text-3xl font-bold text-primary mb-4">Encuéntranos</h2>
-              <p className="text-white-2 mb-6">
+              <h2 className="font-lato text-3xl font-bold text-primary mb-4">Encuéntranos</h2>
+              <p className="font-opensans text-white-2 mb-6">
                 Estamos ubicados en el corazón de Juan Viñas, con fácil acceso y
                 estacionamiento disponible.
               </p>
               <div className="space-y-3 mb-6 text-white-2">
                 <div className="flex items-start">
                   <MapPinIcon className="w-5 h-5 text-secondary-1 mr-2 flex-shrink-0 mt-0.5" />
-                  <p>Juan Viñas, Cartago, Costa Rica</p>
+                  <p className="font-opensans">Juan Viñas, Cartago, Costa Rica</p>
                 </div>
                 <div className="flex items-start">
                   <ClockIcon className="w-5 h-5 text-secondary-1 mr-2 flex-shrink-0 mt-0.5" />
-                  <div>
+                  <div className="font-opensans">
                     <p>Lunes: 11:00 AM - 8:00 PM</p>
                     <p>Martes: Cerrado</p>
                     <p>Miércoles: 11:00 AM - 9:00 PM</p>
@@ -206,7 +206,7 @@ const Home: React.FC<HomeProps> = ({ useElementOnScreen }) => {
               </div>
               <Link
                 to="/contact"
-                className={`inline-flex items-center text-secondary-1 font-medium hover:text-secondary-3 active:text-secondary-2 transition-colors ${
+                className={`font-opensans inline-flex items-center text-secondary-1 font-medium hover:text-secondary-3 active:text-secondary-2 transition-colors ${
                   findUsDescVisible ? "animate__animated animate__fadeInUp" : "opacity-0"
                 }`}
               >
@@ -236,14 +236,14 @@ const Home: React.FC<HomeProps> = ({ useElementOnScreen }) => {
           <div className="text-center mb-10">
             <h2
               ref={instagramTitleRef}
-              className={`text-3xl font-bold text-[#2D1B14] mb-4 ${
+              className={`font-lato text-3xl font-bold text-[#2D1B14] mb-4 ${
                 instagramTitleVisible ? "animate__animated animate__fadeInDown" : "opacity-0"
               }`}
             >
               Síguenos en Instagram
             </h2>
             <p
-              className={`text-gray-700 max-w-2xl mx-auto ${
+              className={`font-opensans text-gray-700 max-w-2xl mx-auto ${
                 instagramTitleVisible ? "animate__animated animate__fadeInDown" : "opacity-0"
               }`}
             >
@@ -268,7 +268,7 @@ const Home: React.FC<HomeProps> = ({ useElementOnScreen }) => {
               href="https://www.instagram.com/p/DBUyxSAx3kf/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center font-medium text-secondary-1 hover:text-secondary-3 active:text-secondary-2"
+              className="font-opensans inline-flex items-center font-medium text-secondary-1 hover:text-secondary-3 active:text-secondary-2"
             >
               <InstagramIcon size={20} className="mr-2" />
               @dondecarla

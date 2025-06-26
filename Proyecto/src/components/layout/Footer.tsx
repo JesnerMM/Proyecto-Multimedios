@@ -14,8 +14,8 @@ const Footer: React.FC<FooterProps> = ({ useElementOnScreen }) => {
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-xl font-semibold mb-4">Donde Carla</h3>
-            <p className="text-sm mb-4">
+            <h3 className="font-lato text-xl font-semibold mb-4">Donde Carla</h3>
+            <p className="font-opensans text-sm mb-4">
               Comida casera, de alta calidad y con un servicio rápido y
               personalizado en Juan Viñas, Costa Rica.
             </p>
@@ -44,7 +44,7 @@ const Footer: React.FC<FooterProps> = ({ useElementOnScreen }) => {
               <li>
                 <Link
                   to="/"
-                  className="hover:text-secondary-3 active:text-secondary-2 transition-colors"
+                  className="font-opensans hover:text-secondary-3 active:text-secondary-2 transition-colors"
                 >
                   Inicio
                 </Link>
@@ -52,7 +52,7 @@ const Footer: React.FC<FooterProps> = ({ useElementOnScreen }) => {
               <li>
                 <Link
                   to="/menu"
-                  className="hover:text-secondary-3 active:text-secondary-2 transition-colors"
+                  className="font-opensans hover:text-secondary-3 active:text-secondary-2 transition-colors"
                 >
                   Menú
                 </Link>
@@ -60,7 +60,7 @@ const Footer: React.FC<FooterProps> = ({ useElementOnScreen }) => {
               <li>
                 <Link
                   to="/about"
-                  className="hover:text-secondary-3 active:text-secondary-2 transition-colors"
+                  className="font-opensans hover:text-secondary-3 active:text-secondary-2 transition-colors"
                 >
                   Nosotros
                 </Link>
@@ -68,7 +68,7 @@ const Footer: React.FC<FooterProps> = ({ useElementOnScreen }) => {
               <li>
                 <Link
                   to="/contact"
-                  className="hover:text-secondary-3 active:text-secondary-2 transition-colors"
+                  className="font-opensans hover:text-secondary-3 active:text-secondary-2 transition-colors"
                 >
                   Contacto
                 </Link>
@@ -76,15 +76,15 @@ const Footer: React.FC<FooterProps> = ({ useElementOnScreen }) => {
             </ul>
           </div>
           <div>
-            <h3 className="text-xl font-semibold mb-4">Información</h3>
+            <h3 className="font-lato text-xl font-semibold mb-4">Información</h3>
             <div className="space-y-3">
               <div className="flex items-start">
                 <MapPinIcon className="w-5 h-5 mr-2 flex-shrink-0 mt-0.5" />
-                <p>Juan Viñas, Cartago, Costa Rica</p>
+                <p className="font-opensans">Juan Viñas, Cartago, Costa Rica</p>
               </div>
               <div className="flex items-start">
                 <ClockIcon className="w-5 h-5 mr-2 flex-shrink-0 mt-0.5" />
-                <div>
+                <div className="font-opensans">
                   <p>Lunes: 11:00 AM - 8:00 PM</p>
                   <p>Martes: Cerrado</p>
                   <p>Miércoles y Domingo: 11:00 AM - 9:00 PM</p>
@@ -95,7 +95,7 @@ const Footer: React.FC<FooterProps> = ({ useElementOnScreen }) => {
             </div>
           </div>
         </div>
-        <div className="mt-8 pt-6 text-center">
+        <div className="font-opensans mt-8 pt-6 text-center">
           <p>
             © {new Date().getFullYear()} Donde Carla. Todos los derechos
             reservados.
