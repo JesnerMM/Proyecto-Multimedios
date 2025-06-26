@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useRef } from "react";
+import Swal from "sweetalert2";
+import AppService from "../services/AppService";
 import {
   MapPinIcon,
   ClockIcon,
@@ -12,14 +14,46 @@ interface ContactProps {
 }
 
 const Contact: React.FC<ContactProps> = ({ useElementOnScreen }) => {
-  // Referencias y visibilidad para animaciones
   const [bannerRef, bannerVisible] = useElementOnScreen({ threshold: 0.3 });
   const [infoRef, infoVisible] = useElementOnScreen({ threshold: 0 });
   const [formRef, formVisible] = useElementOnScreen({ threshold: 0 });
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const appServiceRef = useRef(new AppService());
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    alert("Mensaje enviado. ¡Gracias por contactarnos!");
+
+    const form = e.currentTarget;
+
+    const contacto = {
+      nombre: (form.elements.namedItem("name") as HTMLInputElement).value,
+      email: (form.elements.namedItem("email") as HTMLInputElement).value,
+      telefono: (form.elements.namedItem("phone") as HTMLInputElement).value,
+      asunto: (form.elements.namedItem("subject") as HTMLInputElement).value,
+      mensaje: (form.elements.namedItem("message") as HTMLTextAreaElement).value,
+    };
+
+    try {
+      await appServiceRef.current.insertarContacto(contacto);
+
+      Swal.fire({
+        title: "Mensaje enviado",
+        text: "¡Gracias por contactarnos!",
+        icon: "success",
+        confirmButtonText: "Cerrar",
+        confirmButtonColor: "#8B6F47",
+      });
+
+      form.reset();
+    } catch (error) {
+      Swal.fire({
+        title: "Error",
+        text: "Hubo un problema al enviar el mensaje. Por favor, inténtalo de nuevo.",
+        icon: "error",
+        confirmButtonText: "Cerrar",
+        confirmButtonColor: "#8B6F47",
+      });
+    }
   };
 
   return (
@@ -79,8 +113,7 @@ const Contact: React.FC<ContactProps> = ({ useElementOnScreen }) => {
                   <div>
                     <h3 className="font-lato font-semibold text-primary">Dirección</h3>
                     <p className="font-opensans text-white-2">
-                      100m Este del Parque Central, Juan Viñas, Cartago, Costa
-                      Rica
+                      100m Este del Parque Central, Juan Viñas, Cartago, Costa Rica
                     </p>
                   </div>
                 </div>
@@ -153,78 +186,36 @@ const Contact: React.FC<ContactProps> = ({ useElementOnScreen }) => {
                 className="bg-background-beige p-6 rounded-lg shadow-md"
               >
                 <div className="mb-4">
-                  <label
-                    htmlFor="name"
-                    className="block font-opensans text-secondary-1 font-medium mb-2"
-                  >
+                  <label htmlFor="name" className="block font-opensans text-secondary-1 font-medium mb-2">
                     Nombre
                   </label>
-                  <input
-                    type="text"
-                    id="name"
-                    required
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-secondary-1 focus:border-transparent"
-                  />
+                  <input type="text" id="name" required className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-secondary-1 focus:border-transparent" />
                 </div>
                 <div className="mb-4">
-                  <label
-                    htmlFor="email"
-                    className="block font-opensans text-secondary-1 font-medium mb-2"
-                  >
+                  <label htmlFor="email" className="block font-opensans text-secondary-1 font-medium mb-2">
                     Correo Electrónico
                   </label>
-                  <input
-                    type="email"
-                    id="email"
-                    required
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#8B6F47] focus:border-transparent"
-                  />
+                  <input type="email" id="email" required className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#8B6F47] focus:border-transparent" />
                 </div>
                 <div className="mb-4">
-                  <label
-                    htmlFor="phone"
-                    className="block font-opensans text-secondary-1 font-medium mb-2"
-                  >
+                  <label htmlFor="phone" className="block font-opensans text-secondary-1 font-medium mb-2">
                     Teléfono
                   </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#8B6F47] focus:border-transparent"
-                  />
+                  <input type="tel" id="phone" className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#8B6F47] focus:border-transparent" />
                 </div>
                 <div className="mb-4">
-                  <label
-                    htmlFor="subject"
-                    className="block font-opensans text-secondary-1 font-medium mb-2"
-                  >
+                  <label htmlFor="subject" className="block font-opensans text-secondary-1 font-medium mb-2">
                     Asunto
                   </label>
-                  <input
-                    type="text"
-                    id="subject"
-                    required
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#8B6F47] focus:border-transparent"
-                  />
+                  <input type="text" id="subject" required className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#8B6F47] focus:border-transparent" />
                 </div>
                 <div className="mb-6">
-                  <label
-                    htmlFor="message"
-                    className="block font-opensans text-secondary-1 font-medium mb-2"
-                  >
+                  <label htmlFor="message" className="block font-opensans text-secondary-1 font-medium mb-2">
                     Mensaje
                   </label>
-                  <textarea
-                    id="message"
-                    rows={5}
-                    required
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#8B6F47] focus:border-transparent"
-                  />
+                  <textarea id="message" rows={5} required className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#8B6F47] focus:border-transparent" />
                 </div>
-                <button
-                  type="submit"
-                  className="w-full font-opensans bg-ternary-1 hover:bg-ternary-3 active:bg-ternary-2 text-white-1 font-medium py-3 px-4 rounded-md transition-colors"
-                >
+                <button type="submit" className="w-full font-opensans bg-ternary-1 hover:bg-ternary-3 active:bg-ternary-2 text-white-1 font-medium py-3 px-4 rounded-md transition-colors">
                   Enviar Mensaje
                 </button>
               </form>
