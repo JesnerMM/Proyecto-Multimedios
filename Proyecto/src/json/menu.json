@@ -1,6 +1,12 @@
 {
   "categories": [
     {
+      "id": "all",
+      "name": "Todos",
+      "image": "src/assets/icons/categories/icono-todos-los-platillos.png",
+      "alt": "Icono de todos los platillos"
+    },
+    {
       "id": "entradas",
       "name": "Entradas",
       "image": "src/assets/icons/categories/icono-entradas.png",
@@ -71,13 +77,8 @@
       "name": "Camarones y Pescado",
       "image": "src/assets/icons/categories/icono-camarones-y-pescado.png",
       "alt": "Icono de camarones y pescado"
-    },
-    {
-      "id": "all",
-      "name": "Todos",
-      "image": "src/assets/icons/categories/icono-todos-los-platillos.png",
-      "alt": "Icono de todos los platillos"
     }
+
   ],
   "menuItems": [
     {

@@ -56,11 +56,11 @@ const Home: React.FC<HomeProps> = ({ useElementOnScreen }) => {
             >
               <Link
                 to="/menu"
-                className="font-opensans justify-self-center md:flex md:items-center md:justify-center bg-secondary-1 hover:bg-secondary-3 active:bg-secondary-2 text-white-1 font-medium text-sm py-2.5 px-4 rounded-md w-80 md:w-48 text-center"
+                className="font-opensans justify-self-center md:flex md:items-center md:justify-center bg-secondary-1 hover:bg-secondary-3 active:bg-secondary-2 text-white-1 font-medium text-sm py-2.5 px-4 rounded-md w-[20em] sm:w-[50vw] md:w-48 text-center"
               >
                 Ver Menú
               </Link>
-              <WhatsAppButton className="font-opensans justify-self-center w-80 md:w-48 text-sm py-2.5 px-4" />
+              <WhatsAppButton className="font-opensans justify-self-center w-[20em] sm:w-[50vw] md:w-48 text-sm py-2.5 px-4" />
             </div>
           </div>
         </div>
