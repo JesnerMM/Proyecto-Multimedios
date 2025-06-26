@@ -26,7 +26,7 @@ const About: React.FC<AboutProps> = ({ useElementOnScreen }) => {
           />
           <div ref={bannerContactRef} className={`container mx-auto px-4 z-20 text-center text-white-1`}>
             <h1 className={`text-2xl md:text-3xl lg:text-4xl mb-4 ${bannerContacVisible ? 'animate__animated animate__fadeInDown' : 'opacity-0'}`}>
-              <span className="font-merriweather font-bold">Sobre Nosotros </span>
+              <span className="text-3xl font-merriweather font-bold">Sobre Nosotros </span>
             </h1>
             <p className={`font-opensans text-sm md:text-xl max-w-2xl mx-auto ${bannerContacVisible ? 'animate__animated animate__fadeInUp' : 'opacity-0'}`}>
               Conoce la historia y los valores detrás de Donde Carla
@@ -78,7 +78,7 @@ const About: React.FC<AboutProps> = ({ useElementOnScreen }) => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Misión */}
             <div ref={misionRef} className={`bg-white-1 p-6 rounded-lg shadow-md ${misionVisible ? 'animate__animated animate__fadeInLeft' : 'opacity-0'}`}>
-              <h3 className="text-xl font-semibold text-primary mb-4">Misión</h3>
+              <h3 className="font-lato text-xl font-semibold text-primary mb-4">Misión</h3>
               <p className="font-opensans text-sm md:text-base text-white-2">
                 Promover la calidad y satisfacción del cliente a través de una cocina consistente, atención personalizada y productos frescos, manteniendo la autenticidad de los sabores y la calidez del servicio para fidelizar a nuestros clientes y destacar en el mercado local.
               </p>
@@ -86,7 +86,7 @@ const About: React.FC<AboutProps> = ({ useElementOnScreen }) => {
 
             {/* Visión */}
             <div ref={visionRef} className={`bg-white-1 p-6 rounded-lg shadow-md ${visionVisible ? 'animate__animated animate__fadeIn' : 'opacity-0'}`}>
-              <h3 className="text-xl font-semibold text-primary mb-4">Visión</h3>
+              <h3 className="font-lato text-xl font-semibold text-primary mb-4">Visión</h3>
               <p className="font-opensans text-sm md:text-base text-white-2">
                 Consolidarnos como un referente gastronómico en la zona, reconocido por nuestra excelencia culinaria y servicio ágil, innovando con nuevos platillos y mejoras continuas en el local para atraer a más clientes y, a largo plazo, establecernos en un espacio propio que refleje nuestra identidad y crecimiento.
               </p>
@@ -94,7 +94,7 @@ const About: React.FC<AboutProps> = ({ useElementOnScreen }) => {
 
             {/* Valores */}
             <div ref={valoresRef} className={`bg-white-1 p-6 rounded-lg shadow-md ${valoresVisible ? 'animate__animated animate__fadeInRight' : 'opacity-0'}`}>
-              <h3 className="text-xl font-semibold text-primary mb-4">Valores</h3>
+              <h3 className="font-lato text-xl font-semibold text-primary mb-4">Valores</h3>
               <ul className="space-y-2">
                 {values.map((value, index) => (
                   <li key={index} className="flex items-start">

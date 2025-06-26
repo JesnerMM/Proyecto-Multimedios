@@ -44,10 +44,10 @@ const Contact: React.FC<ContactProps> = ({ useElementOnScreen }) => {
                   : "opacity-0"
               }`}
             >
-              <span className="font-playfair">Contáctanos</span>
+              <span className="text-3xl font-merriweather font-bold">Contáctanos</span>
             </h1>
             <p
-              className={`text-xl md:text-2xl max-w-2xl mx-auto ${
+              className={`font-opensans text-xl md:text-2xl max-w-2xl mx-auto ${
                 bannerVisible ? "animate__animated animate__fadeInUp" : "opacity-0"
               }`}
             >
@@ -70,15 +70,15 @@ const Contact: React.FC<ContactProps> = ({ useElementOnScreen }) => {
                   : "opacity-0"
               }`}
             >
-              <h2 className="text-2xl font-bold text-primary mb-6">
+              <h2 className="font-lato text-2xl font-bold text-primary mb-6">
                 Información de Contacto
               </h2>
               <div className="space-y-6 mb-8">
                 <div className="flex items-start">
                   <MapPinIcon className="w-6 h-6 text-secondary-1 mr-3 flex-shrink-0 mt-0.5" />
                   <div>
-                    <h3 className="font-semibold text-primary">Dirección</h3>
-                    <p className="text-white-2">
+                    <h3 className="font-lato font-semibold text-primary">Dirección</h3>
+                    <p className="font-opensans text-white-2">
                       100m Este del Parque Central, Juan Viñas, Cartago, Costa
                       Rica
                     </p>
@@ -87,8 +87,8 @@ const Contact: React.FC<ContactProps> = ({ useElementOnScreen }) => {
                 <div className="flex items-start">
                   <ClockIcon className="w-6 h-6 text-secondary-1 mr-3 flex-shrink-0 mt-0.5" />
                   <div>
-                    <h3 className="font-semibold text-primary">Horario</h3>
-                    <p className="text-white-2">
+                    <h3 className="font-lato font-semibold text-primary">Horario</h3>
+                    <p className="font-opensans text-white-2">
                       Lunes: 11:00 AM - 8:00 PM <br />
                       Martes: Cerrado <br />
                       Miércoles: 11:00 AM - 9:00 PM <br />
@@ -102,20 +102,20 @@ const Contact: React.FC<ContactProps> = ({ useElementOnScreen }) => {
                 <div className="flex items-start">
                   <MessageCircleIcon className="w-6 h-6 text-secondary-1 mr-3 flex-shrink-0 mt-0.5" />
                   <div>
-                    <h3 className="font-semibold text-primary">WhatsApp</h3>
-                    <p className="text-white-2">+506 8509-8985</p>
+                    <h3 className="font-lato font-semibold text-primary">WhatsApp</h3>
+                    <p className="font-opensans text-white-2">+506 8509-8985</p>
                     <WhatsAppButton className="inline-block mt-2 bg-ternary-1 hover:bg-ternary-3 active:bg-ternary-2 text-white-1 font-medium py-2 px-4 rounded-md transition-colors" />
                   </div>
                 </div>
                 <div className="flex items-start">
                   <InstagramIcon className="w-6 h-6 text-secondary-1 mr-3 flex-shrink-0 mt-0.5" />
                   <div>
-                    <h3 className="font-semibold text-primary">Instagram</h3>
+                    <h3 className="font-lato font-semibold text-primary">Instagram</h3>
                     <a
                       href="https://www.instagram.com/p/DBUyxSAx3kf/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-secondary-1 hover:text-secondary-3 active:text-secondary-2"
+                      className="font-opensans text-secondary-1 hover:text-secondary-3 active:text-secondary-2"
                     >
                       @dondecarla
                     </a>
@@ -145,7 +145,7 @@ const Contact: React.FC<ContactProps> = ({ useElementOnScreen }) => {
                   : "opacity-0"
               }`}
             >
-              <h2 className="text-2xl font-bold text-primary mb-6">
+              <h2 className="font-lato text-2xl font-bold text-primary mb-6">
                 Envíanos un Mensaje
               </h2>
               <form
@@ -155,7 +155,7 @@ const Contact: React.FC<ContactProps> = ({ useElementOnScreen }) => {
                 <div className="mb-4">
                   <label
                     htmlFor="name"
-                    className="block text-secondary-1 font-medium mb-2"
+                    className="block font-opensans text-secondary-1 font-medium mb-2"
                   >
                     Nombre
                   </label>
@@ -169,7 +169,7 @@ const Contact: React.FC<ContactProps> = ({ useElementOnScreen }) => {
                 <div className="mb-4">
                   <label
                     htmlFor="email"
-                    className="block text-secondary-1 font-medium mb-2"
+                    className="block font-opensans text-secondary-1 font-medium mb-2"
                   >
                     Correo Electrónico
                   </label>
@@ -183,7 +183,7 @@ const Contact: React.FC<ContactProps> = ({ useElementOnScreen }) => {
                 <div className="mb-4">
                   <label
                     htmlFor="phone"
-                    className="block text-secondary-1 font-medium mb-2"
+                    className="block font-opensans text-secondary-1 font-medium mb-2"
                   >
                     Teléfono
                   </label>
@@ -196,7 +196,7 @@ const Contact: React.FC<ContactProps> = ({ useElementOnScreen }) => {
                 <div className="mb-4">
                   <label
                     htmlFor="subject"
-                    className="block text-secondary-1 font-medium mb-2"
+                    className="block font-opensans text-secondary-1 font-medium mb-2"
                   >
                     Asunto
                   </label>
@@ -210,7 +210,7 @@ const Contact: React.FC<ContactProps> = ({ useElementOnScreen }) => {
                 <div className="mb-6">
                   <label
                     htmlFor="message"
-                    className="block text-secondary-1 font-medium mb-2"
+                    className="block font-opensans text-secondary-1 font-medium mb-2"
                   >
                     Mensaje
                   </label>
@@ -223,7 +223,7 @@ const Contact: React.FC<ContactProps> = ({ useElementOnScreen }) => {
                 </div>
                 <button
                   type="submit"
-                  className="w-full bg-ternary-1 hover:bg-ternary-3 active:bg-ternary-2 text-white-1 font-medium py-3 px-4 rounded-md transition-colors"
+                  className="w-full font-opensans bg-ternary-1 hover:bg-ternary-3 active:bg-ternary-2 text-white-1 font-medium py-3 px-4 rounded-md transition-colors"
                 >
                   Enviar Mensaje
                 </button>

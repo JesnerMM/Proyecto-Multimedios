@@ -20,7 +20,7 @@ const WhatsAppButton = ({
   return (
     <button
       onClick={handleWhatsAppClick}
-      className={`flex items-center justify-center bg-[#1F2937] hover:bg-[#374151] text-white text-base font-medium py-2.5 px-5 rounded-md transition-colors ${className}`}
+      className={`font-opensans flex items-center justify-center bg-ternary-1 hover:bg-ternary-3 active:bg-ternary-2 text-white-1 text-white text-base font-medium py-2.5 px-5 rounded-md transition-colors ${className}`}
       aria-label={label}
     >
       <MessageCircleIcon size={20} className="mr-2" />

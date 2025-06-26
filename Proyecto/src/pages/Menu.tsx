@@ -49,7 +49,7 @@ const Menu: React.FC<MenuProps> = ({ useElementOnScreen }) => {
         {/* Título */}
         <h1
           ref={titleRef}
-          className={`text-3xl md:text-4xl font-bold text-center text-[#2D1B14] mb-8 ${
+          className={`text-3xl font-merriweather md:text-4xl font-bold text-center text-[#2D1B14] mb-8 ${
             titleVisible ? "animate__animated animate__fadeInDown" : "opacity-0"
           }`}
         >
@@ -68,7 +68,7 @@ const Menu: React.FC<MenuProps> = ({ useElementOnScreen }) => {
             placeholder="Buscar platillos..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full py-2 pl-10 pr-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#8B6F47] focus:border-transparent text-gray-700 placeholder-gray-400"
+            className="font-opensans w-full py-2 pl-10 pr-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#8B6F47] focus:border-transparent text-gray-700 placeholder-gray-400"
           />
           <SearchIcon className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400" />
         </div>
@@ -113,7 +113,7 @@ const Menu: React.FC<MenuProps> = ({ useElementOnScreen }) => {
                       />
                     </div>
                     <span
-                      className={`mt-2 text-sm font-medium ${
+                      className={`font-opensans mt-2 text-sm font-medium ${
                         activeCategory === category.id ? "text-[#8B6F47]" : "text-gray-700"
                       }`}
                     >
@@ -148,16 +148,16 @@ const Menu: React.FC<MenuProps> = ({ useElementOnScreen }) => {
                 <img src={item.image} alt={item.alt} className="w-full h-48 object-cover" />
                 <div className="p-4">
                   <div className="flex justify-between items-center mb-2">
-                    <h3 className="text-xl font-semibold text-[#2D1B14]">{item.name}</h3>
-                    <span className="text-[#8B6F47] font-bold">₡{item.price}</span>
+                    <h3 className="font-lato text-xl font-semibold text-[#2D1B14]">{item.name}</h3>
+                    <span className="font-opensans text-[#8B6F47] font-bold">₡{item.price}</span>
                   </div>
-                  <p className="text-gray-600 text-sm mb-3">{item.description}</p>
+                  <p className="font-opensans text-gray-600 text-sm mb-3">{item.description}</p>
                   <div className="flex justify-between items-center">
-                    <span className="inline-block bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">
+                    <span className="font-opensans inline-block bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">
                       {getCategoryName(item.category)}
                     </span>
                     {item.isSpecial && (
-                      <span className="inline-block bg-[#D4AF37] text-white text-xs px-2 py-1 rounded">
+                      <span className="font-opensans inline-block bg-[#D4AF37] text-white text-xs px-2 py-1 rounded">
                         Especial
                       </span>
                     )}
