@@ -1,4 +1,5 @@
 import React from "react";
+import Data from "../json/menu.json";
 import { Link } from "react-router-dom";
 import InstagramFeed from "../components/layout/instagramFeed/instagramFeed";
 import {
@@ -26,6 +27,9 @@ const Home: React.FC<HomeProps> = ({ useElementOnScreen }) => {
   const [instagramTitleRef, instagramTitleVisible] = useElementOnScreen({ threshold: 0.3 });
   const [instagramFeedRef, instagramFeedVisible] = useElementOnScreen({ threshold: 0.3 });
   const [instagramLinkRef, instagramLinkVisible] = useElementOnScreen({ threshold: 0.3 });
+
+  // Filtrar solo los especiales
+  const specialItems = menuItems.filter((item) => item.isSpecial);
 
   return (
     <div className="w-full">
@@ -118,32 +122,38 @@ const Home: React.FC<HomeProps> = ({ useElementOnScreen }) => {
           >
             Nuestros Platillos Destacados
           </h2>
+
           <div
             ref={featuredItemsRef}
-            className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 ${
+            className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ${
               featuredItemsVisible ? "animate__animated animate__fadeIn" : "opacity-0"
             }`}
           >
-            {featuredItems.map((item, index) => (
+            {specialItems.map((item, index) => (
               <div
                 key={index}
                 className="bg-white rounded-lg overflow-hidden shadow-md transition-transform hover:shadow-lg hover:-translate-y-1"
               >
-                <img
-                  src={item.image}
-                  alt={`Platillo destacado: ${item.name}`}
-                  className="w-full h-48 object-cover"
-                />
+                <img src={item.image} alt={item.alt} className="w-full h-48 object-cover" />
                 <div className="p-4">
                   <div className="flex justify-between items-center mb-2">
-                    <h3 className="text-xl font-semibold text-primary">{item.name}</h3>
-                    <span className="text-secondary-1 font-bold">₡{item.price}</span>
+                    <h3 className="text-xl font-semibold text-[#2D1B14]">{item.name}</h3>
+                    <span className="text-[#8B6F47] font-bold">₡{item.price}</span>
                   </div>
-                  <p className="text-white-2 text-sm">{item.description}</p>
+                  <p className="text-gray-600 text-sm mb-3">{item.description}</p>
+                  <div className="flex justify-between items-center">
+                    <span className="inline-block bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">
+                      {getCategoryName(item.category)}
+                    </span>
+                    <span className="inline-block bg-[#D4AF37] text-white text-xs px-2 py-1 rounded">
+                      Especial
+                    </span>
+                  </div>
                 </div>
               </div>
             ))}
           </div>
+
           <div
             ref={featuredBtnRef}
             className={`mt-10 text-center ${
@@ -294,5 +304,14 @@ const featuredItems = [
       "https://images.unsplash.com/photo-1623065422902-30a2d299bbe4?q=80&w=2071&auto=format&fit=crop",
   },
 ];
+
+const getCategoryName = (categoryId) => {
+  const category = categories.find((cat) => cat.id === categoryId);
+  return category ? category.name : "";
+};
+
+// Datos del menú en formato JSON
+const categories = Data.categories;
+const menuItems = Data.menuItems;
 
 export default Home;
