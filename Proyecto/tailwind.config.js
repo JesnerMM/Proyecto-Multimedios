@@ -39,6 +39,9 @@ export default {
         },
       },
       fontFamily: {
+        montserrat: ['Montserrat', 'sans-serif'],
+        roboto: ['Lato', 'sans-serif'],
+        opensans: ['Open Sans', 'sans-serif'],
         sans: ["Inter", "system-ui", "sans-serif"],
         playfair: ['"Playfair Display"', "serif"],
         dancing: ['"Dancing Script"', "cursive"],
